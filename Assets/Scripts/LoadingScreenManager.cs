@@ -5,31 +5,57 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreenManager : MonoBehaviour
 {
+    private static LoadingScreenManager _instance;
+
     [SerializeField] private LoadingData _loadingData;
     [SerializeField] private GameObject _loaderUI;
     private Slider _progressSlider;
 
-    private void Start()
+    public static LoadingScreenManager Instance
     {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<LoadingScreenManager>();
+
+                if (_instance == null)
+                {
+                    GameObject singletonObject = new GameObject("LoadingScreenManager");
+                    _instance = singletonObject.AddComponent<LoadingScreenManager>();
+                }
+            }
+
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         Initialize();
     }
 
     private void Initialize()
     {
-        if (_loadingData != null)
+        if (_loadingData == null)
         {
-            _progressSlider = _loaderUI.GetComponentInChildren<Slider>(); // Corrected assignment
-            _loaderUI.GetComponent<Image>().sprite = _loadingData.LoadingSprite;
+            _loadingData = Resources.Load<LoadingData>("LoadingData");
         }
-        else
-        {
-            Debug.LogError("No Loading Data Assigned");
-        }
+
+        _progressSlider = _loaderUI.GetComponentInChildren<Slider>();
+        _loaderUI.GetComponent<Image>().sprite = _loadingData.LoadingSprite;
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
     public void EnableLoad()
     {
         LoadScene(1, _loadingData.LoadingTime);
@@ -71,5 +97,3 @@ public class LoadingScreenManager : MonoBehaviour
         }
     }
 }
-
-
