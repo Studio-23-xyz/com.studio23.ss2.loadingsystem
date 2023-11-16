@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "2.5.0",
+    "com.studio23.ss2.achievementsystem": "0.1.0",
     "com.unity.collab-proxy": "2.0.7",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.muse.sprite": "1.0.0-pre.2",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.5",
     "com.unity.ugui": "1.0.0",
@@ -44,7 +46,8 @@
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
       "scopes": [
-        "com.cysharp.unitask"
+        "com.cysharp.unitask",
+        "com.studio23"
       ]
     }
   ]

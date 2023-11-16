@@ -2,39 +2,56 @@ using UnityEditor;
 using UnityEngine;
 using UnityEditor.SceneManagement;
 using System.Collections.Generic;
+using System.IO;
 
-public class SceneListEditor : EditorWindow
+namespace Studio23.SS2.SceneLoadingSystem.Editor
 {
-    [MenuItem("Studio-23/Get Scenes in Build")]
-    public static void ShowWindow()
+    public class SceneListEditor : EditorWindow
     {
-        GetWindow<SceneListEditor>("Scene List");
-    }
+        static List<string> sceneNames = new List<string>();
+        private static string _className = "SceneTable";
+        private static string _nameSpace = "Studio23.SS2.SceneLoadingSystem.Data";
 
-    private void OnGUI()
-    {
-        if (GUILayout.Button("Get Scenes"))
+
+        [MenuItem("Studio-23/SceneLoading/Generate Scene Data")]
+        public static void GetAllScenesInBuild()
         {
-            GetAllScenesInBuild();
-        }
-    }
+            EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
 
-    private void GetAllScenesInBuild()
-    {
-        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+            foreach (var scene in scenes)
+            {
+                string sceneName = Path.GetFileNameWithoutExtension(scene.path);
+                sceneNames.Add(sceneName);
+            }
 
-        List<string> sceneNames = new List<string>();
-
-        foreach (var scene in scenes)
-        {
-            string sceneName = System.IO.Path.GetFileNameWithoutExtension(scene.path);
-            sceneNames.Add(sceneName);
+            GenerateStringProperties();
         }
 
-        // Log scene names to console or do something else with the list
-        foreach (var name in sceneNames)
+        private static void GenerateStringProperties()
         {
-            Debug.Log(name);
+
+
+            string scriptContent = $"namespace {_nameSpace}\n{{\n";
+
+            scriptContent += $"\tpublic static class {_className}\n\t{{\n";
+
+            foreach (var scene in sceneNames)
+            {
+                var sceneName = scene.Replace(" ", "");
+                scriptContent += $"\t\tpublic static readonly string {sceneName} = \"{scene}\";\n";
+            }
+
+            scriptContent += "\t}\n";
+            scriptContent += "}";
+
+            string scriptPath = Path.Combine("Assets", $"{_className}.cs");
+            if (File.Exists(scriptPath))
+            {
+                File.Delete(scriptPath);
+            }
+
+            File.WriteAllText(scriptPath, scriptContent);
+            AssetDatabase.Refresh();
         }
     }
 }
