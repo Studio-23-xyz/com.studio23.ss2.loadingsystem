@@ -10,7 +10,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 {
     
     [System.Serializable]
-    public class GeneratedSceneData
+    public class SceneData
     {
         public bool IsAsync;
         public List<string> ScenesToLoad;
@@ -18,7 +18,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         public LoadSceneMode SceneLoadingMode;
         public SceneProgressBaseUIController GeneratedLoadingScreenBaseUi;
 
-        public GeneratedSceneData(bool isAsync, List<string> scenesToLoad, HintType type,
+        public SceneData(bool isAsync, List<string> scenesToLoad, HintType type,
             LoadSceneMode sceneLoadingMode, SceneProgressBaseUIController generatedLoadingScreenBaseUi)
         {
             IsAsync = isAsync;
@@ -45,28 +45,18 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
                 operation.allowSceneActivation = false;
             }
 
-            bool allScenesLoaded = false;
 
-            while (!allScenesLoaded)
+            while (asyncOperation.TrueForAll(r => r.progress < 0.9f))
             {
                 float totalProgress = 0f;
-                int completedScenes = 0;
-
                 for (int i = 0; i < asyncOperation.Count; i++)
                 {
                     totalProgress += asyncOperation[i].progress;
-
-                    if (asyncOperation[i].isDone)
-                    {
-                        completedScenes++;
-                    }
                 }
 
                 float averageProgress = totalProgress / asyncOperation.Count;
-
                 GeneratedLoadingScreenBaseUi.UpdateProgress(averageProgress);
 
-                allScenesLoaded = completedScenes == asyncOperation.Count;
                 await UniTask.Yield();
             }
 

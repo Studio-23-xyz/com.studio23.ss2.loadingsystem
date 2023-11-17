@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Studio23.SS2.SceneLoadingSystem.Data;
 using UnityEditor;
 using UnityEngine;
@@ -11,13 +12,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
     public class HintGenerateEditor : EditorWindow
     {
 
-        private GeneratedHints LoadingHintData;
-        private GeneratedHints TemporaryLoadingHintData;
+        private HintScriptableObject LoadingHintData;
 
         private string assetName = "HintsData";
         private string folderPath = "Assets/Resources/";
         private Vector2 scrollPosition = Vector2.zero;
-        private Dictionary<HintType, List<string>> hintsDictionary = new Dictionary<HintType, List<string>>();
         private Dictionary<HintType, List<string>> temporaryHintsDictionary = new Dictionary<HintType, List<string>>();
 
 
@@ -54,12 +53,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
             foreach (HintType hintType in Enum.GetValues(typeof(HintType)))
             {
                 EditorGUILayout.LabelField(hintType.ToString(), EditorStyles.boldLabel);
-                List<string> hintList = GetHintList(hintType);
                 List<string> temporaryHintList = GetTemporaryHintList(hintType);
 
                 EditorGUI.indentLevel++;
 
-                int listSize = EditorGUILayout.IntField("List Size", hintList.Count);
+                int listSize = EditorGUILayout.IntField("List Size", temporaryHintList.Count);
                 while (listSize < temporaryHintList.Count)
                 {
                     temporaryHintList.RemoveAt(temporaryHintList.Count - 1);
@@ -89,30 +87,15 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
         }
 
 
-        private List<string> GetHintList(HintType hintType)
-        {
-            if (!hintsDictionary.ContainsKey(hintType))
-            {
-                hintsDictionary.Add(hintType, new List<string>());
-            }
-            return hintsDictionary[hintType];
-        }
+
 
         private void SaveHintsData()
         {
 
-            hintsDictionary.Clear();
-
-            foreach (var pair in temporaryHintsDictionary)
-            {
-                hintsDictionary.Add(pair.Key, new List<string>(pair.Value));
-            }
-
-
-            GeneratedHints newHints = ScriptableObject.CreateInstance<GeneratedHints>();
+            HintScriptableObject newHints = ScriptableObject.CreateInstance<HintScriptableObject>();
             newHints.HintsInfo = new List<HintData>();
 
-            foreach (var hintPair in hintsDictionary)
+            foreach (var hintPair in temporaryHintsDictionary)
             {
                 HintData hintData = new HintData
                 {
@@ -124,6 +107,8 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
             }
 
             string fullPath = folderPath + assetName + ".asset";
+            if(File.Exists(fullPath)) File.Delete(fullPath);
+                
             AssetDatabase.CreateAsset(newHints, fullPath);
             EditorUtility.SetDirty(newHints);
             AssetDatabase.SaveAssets();
@@ -133,25 +118,13 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
         private void CreateOrLoadProgressData()
         {
 
-            LoadingHintData = Resources.Load<GeneratedHints>("HintsData");
+            LoadingHintData = Resources.Load<HintScriptableObject>("HintsData");
 
-            if (LoadingHintData == null)
+            if (LoadingHintData != null)
             {
-                string fullPath = folderPath + assetName + ".asset";
-                LoadingHintData = CreateInstance<GeneratedHints>();
-                AssetDatabase.CreateAsset(LoadingHintData, fullPath);
-                EditorUtility.SetDirty(LoadingHintData);
-                AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
-            }
-            else
-            {
-                hintsDictionary.Clear();
                 temporaryHintsDictionary.Clear();
-
                 foreach (var hintData in LoadingHintData.HintsInfo)
                 {
-                    hintsDictionary.Add(hintData.HintType, hintData.Hints);
                     temporaryHintsDictionary.Add(hintData.HintType, new List<string>(hintData.Hints));
                 }
             }

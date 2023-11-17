@@ -12,9 +12,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
     public class LoadingSceneManager : MonoBehaviour
     {
         private static LoadingSceneManager _instance;
-        public List<GeneratedSceneData> SceneDatas;
         public UnityEvent OnSceneLoadCompleted;
-
         public static LoadingSceneManager Instance
         {
             get
@@ -34,6 +32,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             }
         }
 
+
         private void Awake()
         {
             if (_instance == null)
@@ -47,22 +46,14 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             }
         }
 
-        void Initialize()
-        {
-            SceneDatas = new List<GeneratedSceneData>();
-        }
-
-
-        public void LoadScene(bool isAsync, List<string> scenesToLoad, HintType type,
-            ProgressBarType progressBarType, LoadSceneMode sceneLoadingMode)
+        public void LoadScene(bool isAsync = true, List<string> scenesToLoad = null, HintType type  = HintType.None,
+            ProgressBarType progressBarType = ProgressBarType.None, LoadSceneMode sceneLoadingMode = LoadSceneMode.Additive)
         {
             
             var loadingScreenGameObject = Instantiate(ReturnLoadingScreenData(progressBarType));
             loadingScreenGameObject.TryGetComponent(out SceneProgressBaseUIController sceneProgressUi);
-            SceneDatas.Add(
-                new GeneratedSceneData(isAsync, scenesToLoad, type, sceneLoadingMode, sceneProgressUi));
+            var sceneData = new SceneData(isAsync, scenesToLoad, type, sceneLoadingMode, sceneProgressUi);
         }
-
 
         public List<string> GetCurrentlyLoadedScenes()
         {
@@ -83,15 +74,10 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             var resourceData = Resources.Load<LoadingScreenData>("ProgressBarData");
             if (resourceData != null)
             {
-                var progressBarData = resourceData.ProgressBarData.FirstOrDefault(x => x.ProgressBarType == progressBarType);
-                if (progressBarData != null)
-                {
-                    return progressBarData.ProgressBarPrefab;
-                }
+                return resourceData.ReturnProgressGameObject(progressBarType);
             }
 
             return null;
         }
     }
-
 }

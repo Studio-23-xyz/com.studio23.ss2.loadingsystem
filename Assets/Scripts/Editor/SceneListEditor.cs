@@ -10,6 +10,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
     {
         static List<string> sceneNames = new List<string>();
         private static string _className = "SceneTable";
+        private static string folderPath = "Assets/Resources/";
         private static string _nameSpace = "Studio23.SS2.SceneLoadingSystem.Data";
 
 
@@ -44,7 +45,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
             scriptContent += "\t}\n";
             scriptContent += "}";
 
-            string scriptPath = Path.Combine("Assets", $"{_className}.cs");
+            string scriptPath = Path.Combine(folderPath, $"{_className}.cs");
             if (File.Exists(scriptPath))
             {
                 File.Delete(scriptPath);

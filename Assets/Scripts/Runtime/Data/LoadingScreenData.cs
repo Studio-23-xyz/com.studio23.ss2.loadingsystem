@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Studio23.SS2.SceneLoadingSystem.Data
@@ -10,6 +11,16 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
     {
         public List<ProgressBarData> ProgressBarData;
 
+        public GameObject ReturnProgressGameObject(ProgressBarType type )
+        {
+            var progressBarData = ProgressBarData.FirstOrDefault(x => x.ProgressBarType == type);
+            if (progressBarData != null)
+            {
+                return progressBarData.ProgressBarPrefab;
+            }
+            return null;
+        }
+
     }
 
     [System.Serializable]
@@ -18,8 +29,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         public ProgressBarType ProgressBarType;
         public GameObject ProgressBarPrefab;
     }
-
-
 
 
     public enum ProgressBarType

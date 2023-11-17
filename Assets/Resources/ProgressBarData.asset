@@ -15,9 +15,7 @@ MonoBehaviour:
   ProgressBarData:
   - ProgressBarType: 1
     ProgressBarPrefab: {fileID: 2764382444299919475, guid: 2594c8ebbdd16f34eb05617cdb8a2fbd, type: 3}
-  - ProgressBarType: 0
-    ProgressBarPrefab: {fileID: 2764382444299919475, guid: 2594c8ebbdd16f34eb05617cdb8a2fbd, type: 3}
   - ProgressBarType: 2
     ProgressBarPrefab: {fileID: 2764382444299919475, guid: 2594c8ebbdd16f34eb05617cdb8a2fbd, type: 3}
   - ProgressBarType: 3
-    ProgressBarPrefab: {fileID: 2764382444299919475, guid: 2594c8ebbdd16f34eb05617cdb8a2fbd, type: 3}
+    ProgressBarPrefab: {fileID: 774346386591036746, guid: a70ba08de5f9c634db358bbffc45fe4b, type: 3}
