@@ -1,0 +1,18 @@
+{
+    "name": "com.studio23.ss2.sceneloadingsystem.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:12185dd0757e7264d8e296dc4d95a23e"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
