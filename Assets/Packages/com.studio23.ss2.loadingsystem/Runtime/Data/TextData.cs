@@ -8,18 +8,14 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
     public class TextData
     {
         public TextType Type;
-      
         public string Title;
         public string Description;
-      
-
-       
     }
 
 
     public enum TextType
     {
-        None,
+        Hint,
         Ui,
         GamePlay,
         Trivia,

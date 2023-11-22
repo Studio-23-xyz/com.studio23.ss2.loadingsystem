@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -9,8 +10,8 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
     internal class ProgressEvent:UnityEvent<float>{}
     internal class SceneLoader
     {
-        internal List<string> ScenesToLoad;
-        internal LoadSceneMode SceneLoadingMode;
+        private List<string> _scenesToLoad;
+        private LoadSceneMode _sceneLoadingMode;
 
      
         internal ProgressEvent OnSceneProgress;
@@ -19,8 +20,10 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 
         internal SceneLoader(List<string> scenesToLoad,LoadSceneMode sceneLoadingMode)
         {
-            ScenesToLoad = scenesToLoad;
-            SceneLoadingMode = sceneLoadingMode;
+            OnSceneProgress = new ProgressEvent();
+            OnSceneLoadingComplete = new UnityEvent();
+            _scenesToLoad = scenesToLoad;
+            _sceneLoadingMode = sceneLoadingMode;
             asyncOperation = new List<AsyncOperation>();
         }
 
@@ -33,9 +36,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         internal async UniTask LoadSceneAsync()
         {
             
-            foreach (var scene in ScenesToLoad)
+            foreach (var scene in _scenesToLoad)
             {
-                asyncOperation.Add(SceneManager.LoadSceneAsync(scene, SceneLoadingMode));
+                asyncOperation.Add(SceneManager.LoadSceneAsync(scene, _sceneLoadingMode));
             }
 
             foreach (var operation in asyncOperation)
@@ -46,22 +49,12 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 
             while (asyncOperation.TrueForAll(r => r.progress < 0.9f))
             {
-                float totalProgress = 0f;
-                for (int i = 0; i < asyncOperation.Count; i++)
-                {
-                    totalProgress += asyncOperation[i].progress;
-                }
-
-                float averageProgress = totalProgress / asyncOperation.Count;
+                float averageProgress = asyncOperation.Average(r => r.progress);
                 OnSceneProgress?.Invoke(averageProgress);
-
                 await UniTask.Yield();
             }
-
             await UniTask.NextFrame();
             OnSceneLoadingComplete?.Invoke();
-      
-
         }
 
         internal void ActivateScenes()

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Studio23.SS2.SceneLoadingSystem.Data;
 using Studio23.SS2.SceneLoadingSystem.UI;
 using UnityEngine;
@@ -12,9 +13,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
     public class SceneLoadingSystem : MonoBehaviour
     {
         public static SceneLoadingSystem Instance;
-
         public GameObject LoadingScreenPrefab;
-     
+
+
         private void Awake()
         {
             if (Instance == null)
@@ -28,7 +29,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             }
         }
 
-
         public void LoadScene(string scene)
         {
             LoadScenes(new List<string> { scene});
@@ -39,10 +39,10 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             await LoadScenes(scenes, LoadSceneMode.Additive);
         }
 
-
-        public async Task LoadSceneWithoutLoadingScreen(string scene)
+        public async UniTask LoadSceneWithoutLoadingScreen(string scene)
         {
             SceneLoader sceneLoader = new SceneLoader(new List<string> { scene }, LoadSceneMode.Additive);
+            sceneLoader.OnSceneLoadingComplete.AddListener(sceneLoader.ActivateScenes);
             await sceneLoader.LoadSceneAsync();
         }
 
@@ -51,21 +51,15 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             await SceneLoader.UnloadScene(scene);
         }
 
-
         private async Task LoadScenes(List<string> scenes,LoadSceneMode sceneMode)
         {
-            AbstractLoadingScreenUI LoadingScreen= Instantiate(LoadingScreenPrefab).GetComponent<AbstractLoadingScreenUI>();
+            AbstractLoadingScreenUI loadingScreen= Instantiate(LoadingScreenPrefab).GetComponent<AbstractLoadingScreenUI>();
+            loadingScreen.Initialize();
             SceneLoader sceneLoader= new SceneLoader(scenes,sceneMode);
-            sceneLoader.OnSceneProgress.AddListener(LoadingScreen.UpdateProgress);
-            sceneLoader.OnSceneLoadingComplete.AddListener(LoadingScreen.OnLoadingDone);
-            LoadingScreen.OnValidAnyKeyPressEvent.AddListener(sceneLoader.ActivateScenes);
+            sceneLoader.OnSceneProgress.AddListener(loadingScreen.UpdateProgress);
+            sceneLoader.OnSceneLoadingComplete.AddListener(loadingScreen.OnLoadingDone);
+            loadingScreen.OnValidAnyKeyPressEvent.AddListener(sceneLoader.ActivateScenes);
             await sceneLoader.LoadSceneAsync();
         }
-
-
-   
-
-
-
     }
 }

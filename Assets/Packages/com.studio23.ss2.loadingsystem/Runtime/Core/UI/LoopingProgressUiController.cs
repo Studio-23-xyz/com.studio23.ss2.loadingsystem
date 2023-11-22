@@ -1,27 +1,26 @@
 using Studio23.SS2.SceneLoadingSystem.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-//TODO Implement this
 public class LoopingProgressUiController : AbstractLoadingScreenUI
 {
     private RectTransform _rectTransform;
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private Image _loadingImageSlot;
 
 
     public override void Initialize()
     {
-        //_rectTransform = _loadingImageSlot.GetComponent<RectTransform>();
+        _rectTransform = _loadingImageSlot.GetComponent<RectTransform>();
         base.Initialize();
-        RotateLoadingImage();
     }
 
     public override void UpdateProgress(float progress)
     {
-        RotateLoadingImage();
+        return;
     }
 
-
-    private void RotateLoadingImage()
+    void Update()
     {
         Vector3 currentRotation = _rectTransform.localEulerAngles;
         float newRotation = currentRotation.z - (_rotationSpeed * Time.deltaTime);

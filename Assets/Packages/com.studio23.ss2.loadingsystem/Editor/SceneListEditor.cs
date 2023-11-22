@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEditor.SceneManagement;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.WSA;
 
 namespace Studio23.SS2.SceneLoadingSystem.Editor
 {
@@ -45,6 +46,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
             scriptContent += "\t}\n";
             scriptContent += "}";
 
+
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
             string scriptPath = Path.Combine(folderPath, $"{_className}.cs");
             if (File.Exists(scriptPath))
             {
