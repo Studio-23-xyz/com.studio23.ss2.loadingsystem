@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Studio23.SS2.SceneLoadingSystem.Data
 {
-    [CreateAssetMenu(menuName = "Studio-23/Scene Loading System/Loading Screen TextTable")]
+    [CreateAssetMenu(menuName = "Studio-23/LoadingSystem/Loading Screen TextTable")]
     [System.Serializable]
     public class LoadingScreenTextTable : ScriptableObject
     {

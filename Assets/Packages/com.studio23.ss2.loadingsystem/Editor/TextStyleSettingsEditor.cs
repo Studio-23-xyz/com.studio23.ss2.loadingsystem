@@ -15,7 +15,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
         private readonly string _assetName = "SceneLoadingHintStyle";
         private readonly string _folderPath = "Assets/Resources/";
 
-        [MenuItem("Studio-23/SceneLoading/Generate Hint Style Data")]
+        [MenuItem("Studio-23/LoadingSystem/Generate Hint Style Data")]
         public static void ShowWindow()
         {
             GetWindow<TextStyleSettingsEditor>("Create Hint Style");

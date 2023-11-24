@@ -7,6 +7,7 @@ public class CircularProgressUiController : AbstractLoadingScreenUI
 
     [Header("UI")]
     [SerializeField] private Image _loadingImageSlot;
+
     public override void UpdateProgress(float progress)
     {
         _loadingImageSlot.fillAmount = progress;

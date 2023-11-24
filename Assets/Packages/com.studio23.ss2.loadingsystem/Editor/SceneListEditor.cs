@@ -15,7 +15,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
         private static string _nameSpace = "Studio23.SS2.SceneLoadingSystem.Data";
 
 
-        [MenuItem("Studio-23/SceneLoading/Generate Scene Data")]
+        [MenuItem("Studio-23/LoadingSystem/Generate Scene Data")]
         public static void GetAllScenesInBuild()
         {
             EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;

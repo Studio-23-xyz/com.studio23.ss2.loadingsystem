@@ -8,7 +8,6 @@ public class LoopingProgressUiController : AbstractLoadingScreenUI
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private Image _loadingImageSlot;
 
-
     public override void Initialize()
     {
         _rectTransform = _loadingImageSlot.GetComponent<RectTransform>();
@@ -22,9 +21,7 @@ public class LoopingProgressUiController : AbstractLoadingScreenUI
 
     void Update()
     {
-        Vector3 currentRotation = _rectTransform.localEulerAngles;
-        float newRotation = currentRotation.z - (_rotationSpeed * Time.deltaTime);
-        _rectTransform.localEulerAngles = new Vector3(currentRotation.x, currentRotation.y, newRotation);
+        _rectTransform.localEulerAngles += new Vector3(0,0, _rotationSpeed * Time.deltaTime);
     }
 
 

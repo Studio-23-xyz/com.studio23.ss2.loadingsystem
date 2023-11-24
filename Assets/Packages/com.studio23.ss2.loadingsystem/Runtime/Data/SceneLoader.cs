@@ -12,11 +12,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
     {
         private List<string> _scenesToLoad;
         private LoadSceneMode _sceneLoadingMode;
+        private List<AsyncOperation> _asyncOperation;
 
-     
         internal ProgressEvent OnSceneProgress;
         internal UnityEvent OnSceneLoadingComplete;
-        List<AsyncOperation> asyncOperation;
+
 
         internal SceneLoader(List<string> scenesToLoad,LoadSceneMode sceneLoadingMode)
         {
@@ -24,9 +24,8 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
             OnSceneLoadingComplete = new UnityEvent();
             _scenesToLoad = scenesToLoad;
             _sceneLoadingMode = sceneLoadingMode;
-            asyncOperation = new List<AsyncOperation>();
+            _asyncOperation = new List<AsyncOperation>();
         }
-
 
         internal static async UniTask UnloadScene(string scene)
         {
@@ -35,37 +34,29 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 
         internal async UniTask LoadSceneAsync()
         {
-            
             foreach (var scene in _scenesToLoad)
             {
-                asyncOperation.Add(SceneManager.LoadSceneAsync(scene, _sceneLoadingMode));
+                AsyncOperation tempOperation = SceneManager.LoadSceneAsync(scene, _sceneLoadingMode);
+                tempOperation.allowSceneActivation = false;
+                _asyncOperation.Add(tempOperation);
             }
-
-            foreach (var operation in asyncOperation)
+            while (!_asyncOperation.TrueForAll(r => r.progress >= 0.9f))
             {
-                operation.allowSceneActivation = false;
-            }
-
-
-            while (asyncOperation.TrueForAll(r => r.progress < 0.9f))
-            {
-                float averageProgress = asyncOperation.Average(r => r.progress);
+                float averageProgress = _asyncOperation.Average(r => r.progress);
                 OnSceneProgress?.Invoke(averageProgress);
                 await UniTask.Yield();
             }
+            OnSceneProgress?.Invoke(1.0f);
             await UniTask.NextFrame();
             OnSceneLoadingComplete?.Invoke();
         }
 
         internal void ActivateScenes()
         {
-            foreach (var operation in asyncOperation)
+            foreach (var operation in _asyncOperation)
             {
                 operation.allowSceneActivation = true;
             }
         }
-
     }
-
-
 }

@@ -13,8 +13,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
     public class SceneLoadingSystem : MonoBehaviour
     {
         public static SceneLoadingSystem Instance;
-        public GameObject LoadingScreenPrefab;
-
+        [SerializeField]private GameObject _loadingScreenPrefab;
 
         private void Awake()
         {
@@ -46,14 +45,14 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             await sceneLoader.LoadSceneAsync();
         }
 
-        public async Task UnloadScene(string scene)
+        public async UniTask UnloadScene(string scene)
         {
             await SceneLoader.UnloadScene(scene);
         }
 
-        private async Task LoadScenes(List<string> scenes,LoadSceneMode sceneMode)
+        private async UniTask LoadScenes(List<string> scenes,LoadSceneMode sceneMode)
         {
-            AbstractLoadingScreenUI loadingScreen= Instantiate(LoadingScreenPrefab).GetComponent<AbstractLoadingScreenUI>();
+            AbstractLoadingScreenUI loadingScreen= Instantiate(_loadingScreenPrefab).GetComponent<AbstractLoadingScreenUI>();
             loadingScreen.Initialize();
             SceneLoader sceneLoader= new SceneLoader(scenes,sceneMode);
             sceneLoader.OnSceneProgress.AddListener(loadingScreen.UpdateProgress);

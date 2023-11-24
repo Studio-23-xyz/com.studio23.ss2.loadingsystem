@@ -22,7 +22,6 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
         [SerializeField] private TextStyleSettings _hintStyle;
         [SerializeField] private LoadingScreenTextTable _hintTable;
 
-
         [Header("UI")]
         [SerializeField]
         public Image _backgroundImageSlot;
@@ -30,25 +29,18 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
         [SerializeField] public TextMeshProUGUI _hintDescriptionText;
         [SerializeField] private TextMeshProUGUI _pressAnyKeyText;
 
-
         [Header("Config")]
         [SerializeField] private float _hintShowDuration;
         [SerializeField] public float _backgroundFadeDuration;
-        [SerializeField] private bool _canActivateScene;
-
+        [SerializeField] private bool _needKeyPress;
 
         private CancellationTokenSource _hintCancelTokenSource;
         private CancellationTokenSource _backgroundImageCancelTokenSource;
-
-
-
-        public UnityEvent OnValidAnyKeyPressEvent;
         private IDisposable _onKeyPressEvent;
-
+        public UnityEvent OnValidAnyKeyPressEvent;
 
         public virtual void Initialize()
         {
-            //_canActivateScene = false;
             _hintCancelTokenSource = new CancellationTokenSource();
             _backgroundImageCancelTokenSource = new CancellationTokenSource();
 
@@ -59,7 +51,6 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
             }
             ShowHint();
             CrossFadeBackGroundImages();
-           
         }
 
         public void OnLoadingDone()
@@ -70,27 +61,24 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
             _hintDescriptionText.text = string.Empty;
             _pressAnyKeyText.gameObject.SetActive(true);
             CheckIfKeyPressRequired();
-
-            //_canActivateScene= true;
         }
 
         private void CheckIfKeyPressRequired()
         {
-            if(!_canActivateScene) OnAnyKeyPress();
+            if(!_needKeyPress) OnAnyKeyPress();
             else _onKeyPressEvent = InputSystem.onAnyButtonPress.CallOnce(ctrl => OnAnyKeyPress());
         }
 
         private void OnAnyKeyPress()
         {
-            //if (!_canActivateScene) return;
             _onKeyPressEvent?.Dispose();
             OnValidAnyKeyPressEvent?.Invoke();
-            Destroy(gameObject,.1f);//Maybe wait a frame potential bug Should test
+            Destroy(gameObject,.1f);
         }
 
         public virtual void UpdateProgress(float progress){}
 
-        public async void ShowHint()
+        private async void ShowHint()
         {
             TextStyling(_hintStyle.TitleStyle,_hintHeaderText);
             TextStyling(_hintStyle.DescriptionStyle, _hintDescriptionText);
@@ -112,7 +100,7 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
         }
 
 
-        public async void CrossFadeBackGroundImages()
+        private async void CrossFadeBackGroundImages()
         {
             float timer = 0.0f;
             Image currentImage = _backgroundImageSlot.GetComponent<Image>();
