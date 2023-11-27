@@ -1,31 +1,38 @@
 {
-  "name": "com.studio23.ss2.loadingsystem",
-  "version": "0.1",
-  "displayName": "Scene Loading System",
-  "description": "This is an extension tool designed to simplify the process of creating folder structures required for Unity packages that are published on  openupm.com.",
-  "unity": "2022.3",
-  "unityRelease": "10f1",
-  "documentationUrl": "https://openupm.com/packages/com.studio23.ss2.loadingsystem",
-  "changelogUrl": "https://openupm.com/packages/com.studio23.ss2.loadingsystem",
-  "licensesUrl": "https://api.github.com/licenses/mit",
-  "scopedRegistries": [
-    {
-      "name": "Studio 23",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.studio23.ss2"
-      ]
+    "name": "com.studio23.ss2.loadingsystem",
+    "version": "1.0.0",
+    "displayName": "Scene Loading System",
+    "description": "Loading system is used for to load scene, create different type of loading screen between scene switches, create different type of hints to show between loading screen. ",
+    "unity": "2022.3",
+    "unityRelease": "10f1",
+    "documentationUrl": "https://openupm.com/packages/com.studio23.ss2.loadingsystem",
+    "changelogUrl": "https://openupm.com/packages/com.studio23.ss2.loadingsystem",
+    "licensesUrl": "https://api.github.com/licenses/mit",
+    "scopedRegistries": [
+        {
+            "name": "Studio 23",
+            "url": "https://package.openupm.com",
+            "scopes": [
+                "com.studio23.ss2"
+            ]
+        }
+    ],
+    "dependencies": {
+        "com.cysharp.unitask": "2.5.0",
+        "com.unity.inputsystem" : "1.7.0"
+    },
+    "keywords": [
+        "Scene",
+        "Loading",
+        "System"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem.git"
+    },
+    "author": {
+        "name": "Studio 23",
+        "email": "contact@studio-23.xyz",
+        "url": "https://studio-23.xyz"
     }
-  ],
-  "dependencies": {},
-  "keywords": [
-    "Scene",
-    "Loading",
-    "System"
-  ],
-  "author": {
-    "name": "Studio 23",
-    "email": "contact@studio-23.xyz",
-    "url": "https://studio-23.xyz"
-  }
 }
