@@ -1,0 +1,152 @@
+{
+  "api/Global.CircularProgressUiController.html": {
+    "href": "api/Global.CircularProgressUiController.html",
+    "title": "Class CircularProgressUiController | |",
+    "keywords": "Class CircularProgressUiController Namespace Global public class CircularProgressUiController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI CircularProgressUiController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.Initialize() AbstractLoadingScreenUI.OnLoadingDone() Methods UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
+  },
+  "api/Global.ExampleLoadScene.html": {
+    "href": "api/Global.ExampleLoadScene.html",
+    "title": "Class ExampleLoadScene | |",
+    "keywords": "Class ExampleLoadScene Namespace Global public class ExampleLoadScene : MonoBehaviour Inheritance object ExampleLoadScene Methods LoadScene() public void LoadScene()"
+  },
+  "api/Global.HorizontalProgressUIController.html": {
+    "href": "api/Global.HorizontalProgressUIController.html",
+    "title": "Class HorizontalProgressUIController | |",
+    "keywords": "Class HorizontalProgressUIController Namespace Global public class HorizontalProgressUIController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI HorizontalProgressUIController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.Initialize() AbstractLoadingScreenUI.OnLoadingDone() Methods UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
+  },
+  "api/Global.LoopingProgressUiController.html": {
+    "href": "api/Global.LoopingProgressUiController.html",
+    "title": "Class LoopingProgressUiController | |",
+    "keywords": "Class LoopingProgressUiController Namespace Global public class LoopingProgressUiController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI LoopingProgressUiController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.OnLoadingDone() Methods Initialize() public override void Initialize() UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
+  },
+  "api/Global.SceneLoadingSystemTests.html": {
+    "href": "api/Global.SceneLoadingSystemTests.html",
+    "title": "Class SceneLoadingSystemTests | |",
+    "keywords": "Class SceneLoadingSystemTests Namespace Global public class SceneLoadingSystemTests Inheritance object SceneLoadingSystemTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods LoadMultipleScenes() public IEnumerator LoadMultipleScenes() Returns IEnumerator LoadMultipleScenesWithInput() public IEnumerator LoadMultipleScenesWithInput() Returns IEnumerator LoadSceneWithoutLoadingScreen() public IEnumerator LoadSceneWithoutLoadingScreen() Returns IEnumerator LoadSingleScene() public IEnumerator LoadSingleScene() Returns IEnumerator LoadSingleSceneWithInput() public IEnumerator LoadSingleSceneWithInput() Returns IEnumerator TestSetup() public IEnumerator TestSetup() Returns IEnumerator UnloadScene() public IEnumerator UnloadScene() Returns IEnumerator"
+  },
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace | |",
+    "keywords": "Namespace Classes CircularProgressUiController ExampleLoadScene HorizontalProgressUIController LoopingProgressUiController SceneLoadingSystemTests"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html",
+    "title": "Class SceneLoadingSystem | |",
+    "keywords": "Class SceneLoadingSystem Namespace Studio23.SS2.SceneLoadingSystem.Core public class SceneLoadingSystem : MonoBehaviour Inheritance object SceneLoadingSystem Fields Instance public static SceneLoadingSystem Instance Field Value SceneLoadingSystem Methods LoadScene(string) public void LoadScene(string scene) Parameters scene string LoadSceneWithoutLoadingScreen(string) public UniTask LoadSceneWithoutLoadingScreen(string scene) Parameters scene string Returns UniTask LoadScenes(List<string>) public void LoadScenes(List<string> scenes) Parameters scenes List<string> UnloadScene(string) public UniTask UnloadScene(string scene) Parameters scene string Returns UniTask"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Core.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Core.html",
+    "title": "Namespace Studio23.SS2.SceneLoadingSystem.Core | |",
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Core Classes SceneLoadingSystem"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html",
+    "title": "Class BaseTextStyleData | |",
+    "keywords": "Class BaseTextStyleData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class BaseTextStyleData Inheritance object BaseTextStyleData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields FontAsset public TMP_FontAsset FontAsset Field Value TMP_FontAsset FontStyle public FontStyles FontStyle Field Value FontStyles"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html",
+    "title": "Class LoadingScreenData | |",
+    "keywords": "Class LoadingScreenData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class LoadingScreenData : ScriptableObject Inheritance object LoadingScreenData Fields ProgressBarData public List<ProgressBarData> ProgressBarData Field Value List<ProgressBarData> Methods ReturnProgressGameObject(ProgressBarType) public GameObject ReturnProgressGameObject(ProgressBarType type) Parameters type ProgressBarType Returns GameObject"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html",
+    "title": "Class LoadingScreenTextTable | |",
+    "keywords": "Class LoadingScreenTextTable Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class LoadingScreenTextTable : ScriptableObject Inheritance object LoadingScreenTextTable Fields HintsInfo public List<TextData> HintsInfo Field Value List<TextData> Methods GetHint() public TextData GetHint() Returns TextData GetHint(TextType) public TextData GetHint(TextType type) Parameters type TextType Returns TextData"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html",
+    "title": "Class ProgressBarData | |",
+    "keywords": "Class ProgressBarData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class ProgressBarData Inheritance object ProgressBarData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields ProgressBarPrefab public GameObject ProgressBarPrefab Field Value GameObject ProgressBarType public ProgressBarType ProgressBarType Field Value ProgressBarType"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html",
+    "title": "Enum ProgressBarType | |",
+    "keywords": "Enum ProgressBarType Namespace Studio23.SS2.SceneLoadingSystem.Data public enum ProgressBarType Fields Circular = 2 Horizontal = 1 Looping = 3 None = 0"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html",
+    "title": "Class SceneTable | |",
+    "keywords": "Class SceneTable Namespace Studio23.SS2.SceneLoadingSystem.Data public static class SceneTable Inheritance object SceneTable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields Scene1 public static readonly string Scene1 Field Value string Scene2 public static readonly string Scene2 Field Value string Scene3 public static readonly string Scene3 Field Value string"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html",
+    "title": "Class TextData | |",
+    "keywords": "Class TextData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class TextData Inheritance object TextData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields Description public string Description Field Value string Title public string Title Field Value string Type public TextType Type Field Value TextType"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.TextStyleSettings.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.TextStyleSettings.html",
+    "title": "Class TextStyleSettings | |",
+    "keywords": "Class TextStyleSettings Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class TextStyleSettings : ScriptableObject Inheritance object TextStyleSettings Fields DescriptionStyle public BaseTextStyleData DescriptionStyle Field Value BaseTextStyleData TitleStyle public BaseTextStyleData TitleStyle Field Value BaseTextStyleData"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.TextType.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.TextType.html",
+    "title": "Enum TextType | |",
+    "keywords": "Enum TextType Namespace Studio23.SS2.SceneLoadingSystem.Data public enum TextType Fields GamePlay = 2 Hint = 0 Message = 4 Trivia = 3 Ui = 1"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.html",
+    "title": "Namespace Studio23.SS2.SceneLoadingSystem.Data | |",
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Data Classes BaseTextStyleData LoadingScreenData LoadingScreenTextTable ProgressBarData SceneTable TextData TextStyleSettings Enums ProgressBarType TextType"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html",
+    "title": "Class SceneListEditor | |",
+    "keywords": "Class SceneListEditor Namespace Studio23.SS2.SceneLoadingSystem.Editor public class SceneListEditor : EditorWindow Inheritance object SceneListEditor Methods GetAllScenesInBuild() public static void GetAllScenesInBuild()"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Editor.TextStyleSettingsEditor.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Editor.TextStyleSettingsEditor.html",
+    "title": "Class TextStyleSettingsEditor | |",
+    "keywords": "Class TextStyleSettingsEditor Namespace Studio23.SS2.SceneLoadingSystem.Editor public class TextStyleSettingsEditor : EditorWindow Inheritance object TextStyleSettingsEditor Methods ShowWindow() public static void ShowWindow()"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Editor.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Editor.html",
+    "title": "Namespace Studio23.SS2.SceneLoadingSystem.Editor | |",
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Editor Classes SceneListEditor TextStyleSettingsEditor"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Extension.ShuffleListExtension.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Extension.ShuffleListExtension.html",
+    "title": "Class ShuffleListExtension | |",
+    "keywords": "Class ShuffleListExtension Namespace Studio23.SS2.SceneLoadingSystem.Extension public static class ShuffleListExtension Inheritance object ShuffleListExtension Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Shuffle<T>(List<T>) public static List<T> Shuffle<T>(List<T> sourceList) Parameters sourceList List<T> Returns List<T> Type Parameters T"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Extension.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Extension.html",
+    "title": "Namespace Studio23.SS2.SceneLoadingSystem.Extension | |",
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Extension Classes ShuffleListExtension"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html",
+    "title": "Class AbstractLoadingScreenUI | |",
+    "keywords": "Class AbstractLoadingScreenUI Namespace Studio23.SS2.SceneLoadingSystem.UI public abstract class AbstractLoadingScreenUI : MonoBehaviour Inheritance object AbstractLoadingScreenUI Derived CircularProgressUiController HorizontalProgressUIController LoopingProgressUiController Fields OnValidAnyKeyPressEvent public UnityEvent OnValidAnyKeyPressEvent Field Value UnityEvent _backgroundFadeDuration public float _backgroundFadeDuration Field Value float _backgroundImageSlot public Image _backgroundImageSlot Field Value Image _backgroundImages public List<Sprite> _backgroundImages Field Value List<Sprite> _hintDescriptionText public TextMeshProUGUI _hintDescriptionText Field Value TextMeshProUGUI _hintHeaderText public TextMeshProUGUI _hintHeaderText Field Value TextMeshProUGUI Methods Initialize() public virtual void Initialize() OnLoadingDone() public void OnLoadingDone() UpdateProgress(float) public virtual void UpdateProgress(float progress) Parameters progress float"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.UI.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.UI.html",
+    "title": "Namespace Studio23.SS2.SceneLoadingSystem.UI | |",
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.UI Classes AbstractLoadingScreenUI"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "| |",
+    "keywords": "This is the documentation for the Scripting APIs of this package."
+  },
+  "changelog/CHANGELOG.html": {
+    "href": "changelog/CHANGELOG.html",
+    "title": "Changelog | |",
+    "keywords": "Changelog [v1.0.0] - 2023-11-27 Added First package publish. Added different type of loading screen prefab Added SceneLoadingSystem script Added sample scene"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| |",
+    "keywords": "This page redirects to the manual."
+  },
+  "license/LICENSE.html": {
+    "href": "license/LICENSE.html",
+    "title": "| |",
+    "keywords": "MIT License Copyright (c) 2023 Studio-23 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  "manual/index.html": {
+    "href": "manual/index.html",
+    "title": "Loading System | |",
+    "keywords": "Loading System Loading system is used for to load scene, create different type of loading screen between scene switches, create different type of hints to show between loading screen. Table of Contents Installation Usage Getting Started [Using the SceneLoading System](#Using the SceneLoading System) [Using the AbstractLoadingScreen UI script](#Using the AbstractLoadingScreen UI script) Installation Install via Git URL You can also use the \"Install from Git URL\" option from Unity Package Manager to install the package. https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem.git#upm Usage Getting Started To start using the Loading System. You need to take a few setup stepts Click on the 'Studio-23' available on the top navigation bar and navigate to LoadingSystem > Generate Scene Data to create a SceneTable script that contains all of the scenes in the builds. New hints can be created from Create > Studio-23 > LoadingSystem > Loading Screen TextTable. Click on the 'Studio-23' available on the top navigation bar and navigate to LoadingSystem > Generate Hint Styling Data to create a new stryle for the hints to show. Using the SceneLoading System Create an empty gameobject. Attach The SceneLoadingSystem Script to it. Assign one of the created loading screen prefab to use in SceneLoadingSystem script Loading Screen Prefab slot. Simply call this following method to load scene. Using the AbstractLoadingScreen UI script AbstractLoadingScreen UI script is responsible for showing ui during loading scene and it should be attached to every loading screen prefab. We can modify the ui content from this script. We can assign hints and hint style from the inspector. We can tweak hint duration, crossfade duration and need for key press from the inspector. We can assign mutiple images in the Background Images slot for crossfade effect. SceneLoadingSystem.Instance.LoadScene(string sceneName);"
+  }
+}
