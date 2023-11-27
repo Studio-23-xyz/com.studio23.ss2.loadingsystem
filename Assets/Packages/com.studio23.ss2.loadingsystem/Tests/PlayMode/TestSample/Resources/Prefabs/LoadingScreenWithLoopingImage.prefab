@@ -128,7 +128,7 @@ MonoBehaviour:
   _pressAnyKeyText: {fileID: 5156522044224453207}
   _hintShowDuration: 2
   _backgroundFadeDuration: 6
-  _needKeyPress: 0
+  _needKeyPress: 1
   OnValidAnyKeyPressEvent:
     m_PersistentCalls:
       m_Calls: []

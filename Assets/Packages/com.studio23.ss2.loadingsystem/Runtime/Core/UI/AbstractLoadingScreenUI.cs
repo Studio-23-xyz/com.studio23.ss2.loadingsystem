@@ -63,22 +63,23 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
             CheckIfKeyPressRequired();
         }
 
-        private void CheckIfKeyPressRequired()
+        protected void CheckIfKeyPressRequired()
         {
             if(!_needKeyPress) OnAnyKeyPress();
             else _onKeyPressEvent = InputSystem.onAnyButtonPress.CallOnce(ctrl => OnAnyKeyPress());
         }
 
-        private void OnAnyKeyPress()
+        protected void OnAnyKeyPress()
         {
             _onKeyPressEvent?.Dispose();
+            Debug.Log("Any Key Pressed");
             OnValidAnyKeyPressEvent?.Invoke();
             Destroy(gameObject,.1f);
         }
 
         public virtual void UpdateProgress(float progress){}
 
-        private async void ShowHint()
+        protected async void ShowHint()
         {
             TextStyling(_hintStyle.TitleStyle,_hintHeaderText);
             TextStyling(_hintStyle.DescriptionStyle, _hintDescriptionText);
@@ -93,14 +94,14 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
             }
         }
 
-        private void TextStyling(BaseTextStyleData styleData, TextMeshProUGUI textToStyle)
+        protected void TextStyling(BaseTextStyleData styleData, TextMeshProUGUI textToStyle)
         {
             textToStyle.font = styleData.FontAsset;
             textToStyle.fontStyle = styleData.FontStyle;
         }
 
 
-        private async void CrossFadeBackGroundImages()
+        protected async void CrossFadeBackGroundImages()
         {
             float timer = 0.0f;
             Image currentImage = _backgroundImageSlot.GetComponent<Image>();
