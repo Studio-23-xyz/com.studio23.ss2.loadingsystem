@@ -2,7 +2,7 @@
   "api/Global.CircularProgressUiController.html": {
     "href": "api/Global.CircularProgressUiController.html",
     "title": "Class CircularProgressUiController | |",
-    "keywords": "Class CircularProgressUiController Namespace Global public class CircularProgressUiController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI CircularProgressUiController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.Initialize() AbstractLoadingScreenUI.OnLoadingDone() Methods UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
+    "keywords": "Class CircularProgressUiController Namespace Global public class CircularProgressUiController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI CircularProgressUiController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.Initialize() AbstractLoadingScreenUI.OnLoadingDone() AbstractLoadingScreenUI.CheckIfKeyPressRequired() AbstractLoadingScreenUI.OnAnyKeyPress() AbstractLoadingScreenUI.ShowHint() AbstractLoadingScreenUI.TextStyling(BaseTextStyleData, TextMeshProUGUI) AbstractLoadingScreenUI.CrossFadeBackGroundImages() Methods UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
   },
   "api/Global.ExampleLoadScene.html": {
     "href": "api/Global.ExampleLoadScene.html",
@@ -12,17 +12,17 @@
   "api/Global.HorizontalProgressUIController.html": {
     "href": "api/Global.HorizontalProgressUIController.html",
     "title": "Class HorizontalProgressUIController | |",
-    "keywords": "Class HorizontalProgressUIController Namespace Global public class HorizontalProgressUIController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI HorizontalProgressUIController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.Initialize() AbstractLoadingScreenUI.OnLoadingDone() Methods UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
+    "keywords": "Class HorizontalProgressUIController Namespace Global public class HorizontalProgressUIController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI HorizontalProgressUIController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.Initialize() AbstractLoadingScreenUI.OnLoadingDone() AbstractLoadingScreenUI.CheckIfKeyPressRequired() AbstractLoadingScreenUI.OnAnyKeyPress() AbstractLoadingScreenUI.ShowHint() AbstractLoadingScreenUI.TextStyling(BaseTextStyleData, TextMeshProUGUI) AbstractLoadingScreenUI.CrossFadeBackGroundImages() Methods UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
   },
   "api/Global.LoopingProgressUiController.html": {
     "href": "api/Global.LoopingProgressUiController.html",
     "title": "Class LoopingProgressUiController | |",
-    "keywords": "Class LoopingProgressUiController Namespace Global public class LoopingProgressUiController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI LoopingProgressUiController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.OnLoadingDone() Methods Initialize() public override void Initialize() UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
+    "keywords": "Class LoopingProgressUiController Namespace Global public class LoopingProgressUiController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI LoopingProgressUiController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.OnLoadingDone() AbstractLoadingScreenUI.CheckIfKeyPressRequired() AbstractLoadingScreenUI.OnAnyKeyPress() AbstractLoadingScreenUI.ShowHint() AbstractLoadingScreenUI.TextStyling(BaseTextStyleData, TextMeshProUGUI) AbstractLoadingScreenUI.CrossFadeBackGroundImages() Methods Initialize() public override void Initialize() UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
   },
   "api/Global.SceneLoadingSystemTests.html": {
     "href": "api/Global.SceneLoadingSystemTests.html",
     "title": "Class SceneLoadingSystemTests | |",
-    "keywords": "Class SceneLoadingSystemTests Namespace Global public class SceneLoadingSystemTests Inheritance object SceneLoadingSystemTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods LoadMultipleScenes() public IEnumerator LoadMultipleScenes() Returns IEnumerator LoadMultipleScenesWithInput() public IEnumerator LoadMultipleScenesWithInput() Returns IEnumerator LoadSceneWithoutLoadingScreen() public IEnumerator LoadSceneWithoutLoadingScreen() Returns IEnumerator LoadSingleScene() public IEnumerator LoadSingleScene() Returns IEnumerator LoadSingleSceneWithInput() public IEnumerator LoadSingleSceneWithInput() Returns IEnumerator TestSetup() public IEnumerator TestSetup() Returns IEnumerator UnloadScene() public IEnumerator UnloadScene() Returns IEnumerator"
+    "keywords": "Class SceneLoadingSystemTests Namespace Global public class SceneLoadingSystemTests Inheritance object SceneLoadingSystemTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ClearTestData() public void ClearTestData() LoadMultipleScenes() public IEnumerator LoadMultipleScenes() Returns IEnumerator LoadSingleScene() public IEnumerator LoadSingleScene() Returns IEnumerator LoadSingleSceneWithInput() public IEnumerator LoadSingleSceneWithInput() Returns IEnumerator UnloadScene() public IEnumerator UnloadScene() Returns IEnumerator UnloadScene_2() public IEnumerator UnloadScene_2() Returns IEnumerator"
   },
   "api/Global.html": {
     "href": "api/Global.html",
@@ -32,7 +32,7 @@
   "api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html",
     "title": "Class SceneLoadingSystem | |",
-    "keywords": "Class SceneLoadingSystem Namespace Studio23.SS2.SceneLoadingSystem.Core public class SceneLoadingSystem : MonoBehaviour Inheritance object SceneLoadingSystem Fields Instance public static SceneLoadingSystem Instance Field Value SceneLoadingSystem Methods LoadScene(string) public void LoadScene(string scene) Parameters scene string LoadSceneWithoutLoadingScreen(string) public UniTask LoadSceneWithoutLoadingScreen(string scene) Parameters scene string Returns UniTask LoadScenes(List<string>) public void LoadScenes(List<string> scenes) Parameters scenes List<string> UnloadScene(string) public UniTask UnloadScene(string scene) Parameters scene string Returns UniTask"
+    "keywords": "Class SceneLoadingSystem Namespace Studio23.SS2.SceneLoadingSystem.Core public class SceneLoadingSystem : MonoBehaviour Inheritance object SceneLoadingSystem Fields Instance public static SceneLoadingSystem Instance Field Value SceneLoadingSystem Methods LoadScene(string) Load a single scene by scene name public UniTask LoadScene(string scene) Parameters scene string Returns UniTask LoadSceneWithoutLoadingScreen(string) Load a single scene by scene name without loading screen public UniTask LoadSceneWithoutLoadingScreen(string scene) Parameters scene string Returns UniTask LoadScenes(List<string>) Load multiple scenes by a list of scene name public UniTask LoadScenes(List<string> scenes) Parameters scenes List<string> Returns UniTask UnloadAll() Unload all scene from build settings public void UnloadAll() UnloadScene(string) Unload a scene by scene name public UniTask UnloadScene(string scene) Parameters scene string Returns UniTask"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Core.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Core.html",
@@ -44,30 +44,20 @@
     "title": "Class BaseTextStyleData | |",
     "keywords": "Class BaseTextStyleData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class BaseTextStyleData Inheritance object BaseTextStyleData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields FontAsset public TMP_FontAsset FontAsset Field Value TMP_FontAsset FontStyle public FontStyles FontStyle Field Value FontStyles"
   },
-  "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html": {
-    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html",
-    "title": "Class LoadingScreenData | |",
-    "keywords": "Class LoadingScreenData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class LoadingScreenData : ScriptableObject Inheritance object LoadingScreenData Fields ProgressBarData public List<ProgressBarData> ProgressBarData Field Value List<ProgressBarData> Methods ReturnProgressGameObject(ProgressBarType) public GameObject ReturnProgressGameObject(ProgressBarType type) Parameters type ProgressBarType Returns GameObject"
+  "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html",
+    "title": "Class FakeSceneTable | |",
+    "keywords": "Class FakeSceneTable Namespace Studio23.SS2.SceneLoadingSystem.Data public static class FakeSceneTable Inheritance object FakeSceneTable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields FakeScene2 public static readonly string FakeScene2 Field Value string FakeScene3 public static readonly string FakeScene3 Field Value string LoadingScene1 public static readonly string LoadingScene1 Field Value string"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html",
     "title": "Class LoadingScreenTextTable | |",
     "keywords": "Class LoadingScreenTextTable Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class LoadingScreenTextTable : ScriptableObject Inheritance object LoadingScreenTextTable Fields HintsInfo public List<TextData> HintsInfo Field Value List<TextData> Methods GetHint() public TextData GetHint() Returns TextData GetHint(TextType) public TextData GetHint(TextType type) Parameters type TextType Returns TextData"
   },
-  "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html": {
-    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html",
-    "title": "Class ProgressBarData | |",
-    "keywords": "Class ProgressBarData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class ProgressBarData Inheritance object ProgressBarData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields ProgressBarPrefab public GameObject ProgressBarPrefab Field Value GameObject ProgressBarType public ProgressBarType ProgressBarType Field Value ProgressBarType"
-  },
-  "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html": {
-    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html",
-    "title": "Enum ProgressBarType | |",
-    "keywords": "Enum ProgressBarType Namespace Studio23.SS2.SceneLoadingSystem.Data public enum ProgressBarType Fields Circular = 2 Horizontal = 1 Looping = 3 None = 0"
-  },
   "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html",
     "title": "Class SceneTable | |",
-    "keywords": "Class SceneTable Namespace Studio23.SS2.SceneLoadingSystem.Data public static class SceneTable Inheritance object SceneTable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields Scene1 public static readonly string Scene1 Field Value string Scene2 public static readonly string Scene2 Field Value string Scene3 public static readonly string Scene3 Field Value string"
+    "keywords": "Class SceneTable Namespace Studio23.SS2.SceneLoadingSystem.Data public static class SceneTable Inheritance object SceneTable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields DummyScene1 public static readonly string DummyScene1 Field Value string DummyScene2 public static readonly string DummyScene2 Field Value string ScriptScene public static readonly string ScriptScene Field Value string"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html",
@@ -87,7 +77,7 @@
   "api/Studio23.SS2.SceneLoadingSystem.Data.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.html",
     "title": "Namespace Studio23.SS2.SceneLoadingSystem.Data | |",
-    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Data Classes BaseTextStyleData LoadingScreenData LoadingScreenTextTable ProgressBarData SceneTable TextData TextStyleSettings Enums ProgressBarType TextType"
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Data Classes BaseTextStyleData FakeSceneTable LoadingScreenTextTable SceneTable TextData TextStyleSettings Enums TextType"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html",
@@ -117,7 +107,7 @@
   "api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html",
     "title": "Class AbstractLoadingScreenUI | |",
-    "keywords": "Class AbstractLoadingScreenUI Namespace Studio23.SS2.SceneLoadingSystem.UI public abstract class AbstractLoadingScreenUI : MonoBehaviour Inheritance object AbstractLoadingScreenUI Derived CircularProgressUiController HorizontalProgressUIController LoopingProgressUiController Fields OnValidAnyKeyPressEvent public UnityEvent OnValidAnyKeyPressEvent Field Value UnityEvent _backgroundFadeDuration public float _backgroundFadeDuration Field Value float _backgroundImageSlot public Image _backgroundImageSlot Field Value Image _backgroundImages public List<Sprite> _backgroundImages Field Value List<Sprite> _hintDescriptionText public TextMeshProUGUI _hintDescriptionText Field Value TextMeshProUGUI _hintHeaderText public TextMeshProUGUI _hintHeaderText Field Value TextMeshProUGUI Methods Initialize() public virtual void Initialize() OnLoadingDone() public void OnLoadingDone() UpdateProgress(float) public virtual void UpdateProgress(float progress) Parameters progress float"
+    "keywords": "Class AbstractLoadingScreenUI Namespace Studio23.SS2.SceneLoadingSystem.UI public abstract class AbstractLoadingScreenUI : MonoBehaviour Inheritance object AbstractLoadingScreenUI Derived CircularProgressUiController HorizontalProgressUIController LoopingProgressUiController Fields OnValidAnyKeyPressEvent public UnityEvent OnValidAnyKeyPressEvent Field Value UnityEvent _backgroundFadeDuration public float _backgroundFadeDuration Field Value float _backgroundImageSlot public Image _backgroundImageSlot Field Value Image _backgroundImages public List<Sprite> _backgroundImages Field Value List<Sprite> _hintDescriptionText public TextMeshProUGUI _hintDescriptionText Field Value TextMeshProUGUI _hintHeaderText public TextMeshProUGUI _hintHeaderText Field Value TextMeshProUGUI Methods CheckIfKeyPressRequired() protected void CheckIfKeyPressRequired() CrossFadeBackGroundImages() protected void CrossFadeBackGroundImages() Initialize() public virtual void Initialize() OnAnyKeyPress() protected void OnAnyKeyPress() OnLoadingDone() public void OnLoadingDone() ShowHint() protected void ShowHint() TextStyling(BaseTextStyleData, TextMeshProUGUI) protected void TextStyling(BaseTextStyleData styleData, TextMeshProUGUI textToStyle) Parameters styleData BaseTextStyleData textToStyle TextMeshProUGUI UpdateProgress(float) public virtual void UpdateProgress(float progress) Parameters progress float"
   },
   "api/Studio23.SS2.SceneLoadingSystem.UI.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.UI.html",
@@ -132,7 +122,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v1.0.0] - 2023-11-27 Added First package publish. Added different type of loading screen prefab Added SceneLoadingSystem script Added sample scene"
+    "keywords": "Changelog [v1.0.0] - 2023-11-27 Added First package publish. Added different type of loading screen prefab Added SceneLoadingSystem script Added sample scene Removed unnecessary codes Updated package.json urls Updated Test Folder"
   },
   "index.html": {
     "href": "index.html",

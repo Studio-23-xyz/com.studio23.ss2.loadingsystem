@@ -108,6 +108,19 @@ references:
   commentId: T:Global.SceneLoadingSystemTests
   fullName: SceneLoadingSystemTests
   nameWithType: SceneLoadingSystemTests
+- uid: Global.SceneLoadingSystemTests.ClearTestData
+  name: ClearTestData()
+  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_ClearTestData
+  commentId: M:Global.SceneLoadingSystemTests.ClearTestData
+  fullName: SceneLoadingSystemTests.ClearTestData()
+  nameWithType: SceneLoadingSystemTests.ClearTestData()
+- uid: Global.SceneLoadingSystemTests.ClearTestData*
+  name: ClearTestData
+  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_ClearTestData_
+  commentId: Overload:Global.SceneLoadingSystemTests.ClearTestData
+  isSpec: "True"
+  fullName: SceneLoadingSystemTests.ClearTestData
+  nameWithType: SceneLoadingSystemTests.ClearTestData
 - uid: Global.SceneLoadingSystemTests.LoadMultipleScenes
   name: LoadMultipleScenes()
   href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadMultipleScenes
@@ -121,32 +134,6 @@ references:
   isSpec: "True"
   fullName: SceneLoadingSystemTests.LoadMultipleScenes
   nameWithType: SceneLoadingSystemTests.LoadMultipleScenes
-- uid: Global.SceneLoadingSystemTests.LoadMultipleScenesWithInput
-  name: LoadMultipleScenesWithInput()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadMultipleScenesWithInput
-  commentId: M:Global.SceneLoadingSystemTests.LoadMultipleScenesWithInput
-  fullName: SceneLoadingSystemTests.LoadMultipleScenesWithInput()
-  nameWithType: SceneLoadingSystemTests.LoadMultipleScenesWithInput()
-- uid: Global.SceneLoadingSystemTests.LoadMultipleScenesWithInput*
-  name: LoadMultipleScenesWithInput
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadMultipleScenesWithInput_
-  commentId: Overload:Global.SceneLoadingSystemTests.LoadMultipleScenesWithInput
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.LoadMultipleScenesWithInput
-  nameWithType: SceneLoadingSystemTests.LoadMultipleScenesWithInput
-- uid: Global.SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen
-  name: LoadSceneWithoutLoadingScreen()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadSceneWithoutLoadingScreen
-  commentId: M:Global.SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen
-  fullName: SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen()
-  nameWithType: SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen()
-- uid: Global.SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen*
-  name: LoadSceneWithoutLoadingScreen
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadSceneWithoutLoadingScreen_
-  commentId: Overload:Global.SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen
-  nameWithType: SceneLoadingSystemTests.LoadSceneWithoutLoadingScreen
 - uid: Global.SceneLoadingSystemTests.LoadSingleScene
   name: LoadSingleScene()
   href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadSingleScene
@@ -173,19 +160,6 @@ references:
   isSpec: "True"
   fullName: SceneLoadingSystemTests.LoadSingleSceneWithInput
   nameWithType: SceneLoadingSystemTests.LoadSingleSceneWithInput
-- uid: Global.SceneLoadingSystemTests.TestSetup
-  name: TestSetup()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_TestSetup
-  commentId: M:Global.SceneLoadingSystemTests.TestSetup
-  fullName: SceneLoadingSystemTests.TestSetup()
-  nameWithType: SceneLoadingSystemTests.TestSetup()
-- uid: Global.SceneLoadingSystemTests.TestSetup*
-  name: TestSetup
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_TestSetup_
-  commentId: Overload:Global.SceneLoadingSystemTests.TestSetup
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.TestSetup
-  nameWithType: SceneLoadingSystemTests.TestSetup
 - uid: Global.SceneLoadingSystemTests.UnloadScene
   name: UnloadScene()
   href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_UnloadScene
@@ -199,6 +173,19 @@ references:
   isSpec: "True"
   fullName: SceneLoadingSystemTests.UnloadScene
   nameWithType: SceneLoadingSystemTests.UnloadScene
+- uid: Global.SceneLoadingSystemTests.UnloadScene_2
+  name: UnloadScene_2()
+  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_UnloadScene_2
+  commentId: M:Global.SceneLoadingSystemTests.UnloadScene_2
+  fullName: SceneLoadingSystemTests.UnloadScene_2()
+  nameWithType: SceneLoadingSystemTests.UnloadScene_2()
+- uid: Global.SceneLoadingSystemTests.UnloadScene_2*
+  name: UnloadScene_2
+  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_UnloadScene_2_
+  commentId: Overload:Global.SceneLoadingSystemTests.UnloadScene_2
+  isSpec: "True"
+  fullName: SceneLoadingSystemTests.UnloadScene_2
+  nameWithType: SceneLoadingSystemTests.UnloadScene_2
 - uid: Studio23.SS2.SceneLoadingSystem.Core
   name: Studio23.SS2.SceneLoadingSystem.Core
   href: api/Studio23.SS2.SceneLoadingSystem.Core.html
@@ -265,6 +252,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes
   nameWithType: SceneLoadingSystem.LoadScenes
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
+  name: UnloadAll()
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadAll
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll()
+  nameWithType: SceneLoadingSystem.UnloadAll()
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll*
+  name: UnloadAll
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadAll_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
+  nameWithType: SceneLoadingSystem.UnloadAll
 - uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene(System.String)
   name: UnloadScene(string)
   href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScene_System_String_
@@ -305,31 +305,30 @@ references:
   commentId: F:Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.FontStyle
   fullName: Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.FontStyle
   nameWithType: BaseTextStyleData.FontStyle
-- uid: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData
-  name: LoadingScreenData
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html
-  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData
-  nameWithType: LoadingScreenData
-- uid: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ProgressBarData
-  name: ProgressBarData
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html#Studio23_SS2_SceneLoadingSystem_Data_LoadingScreenData_ProgressBarData
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ProgressBarData
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ProgressBarData
-  nameWithType: LoadingScreenData.ProgressBarData
-- uid: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ReturnProgressGameObject(Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType)
-  name: ReturnProgressGameObject(ProgressBarType)
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html#Studio23_SS2_SceneLoadingSystem_Data_LoadingScreenData_ReturnProgressGameObject_Studio23_SS2_SceneLoadingSystem_Data_ProgressBarType_
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ReturnProgressGameObject(Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType)
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ReturnProgressGameObject(Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType)
-  nameWithType: LoadingScreenData.ReturnProgressGameObject(ProgressBarType)
-- uid: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ReturnProgressGameObject*
-  name: ReturnProgressGameObject
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html#Studio23_SS2_SceneLoadingSystem_Data_LoadingScreenData_ReturnProgressGameObject_
-  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ReturnProgressGameObject
-  isSpec: "True"
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.ReturnProgressGameObject
-  nameWithType: LoadingScreenData.ReturnProgressGameObject
+- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable
+  name: FakeSceneTable
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html
+  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable
+  nameWithType: FakeSceneTable
+- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene2
+  name: FakeScene2
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_FakeSceneTable_FakeScene2
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene2
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene2
+  nameWithType: FakeSceneTable.FakeScene2
+- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene3
+  name: FakeScene3
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_FakeSceneTable_FakeScene3
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene3
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene3
+  nameWithType: FakeSceneTable.FakeScene3
+- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.LoadingScene1
+  name: LoadingScene1
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_FakeSceneTable_LoadingScene1
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.LoadingScene1
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.LoadingScene1
+  nameWithType: FakeSceneTable.LoadingScene1
 - uid: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable
   name: LoadingScreenTextTable
   href: api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html
@@ -361,78 +360,30 @@ references:
   commentId: F:Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.HintsInfo
   fullName: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.HintsInfo
   nameWithType: LoadingScreenTextTable.HintsInfo
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData
-  name: ProgressBarData
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html
-  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData
-  nameWithType: ProgressBarData
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.ProgressBarPrefab
-  name: ProgressBarPrefab
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html#Studio23_SS2_SceneLoadingSystem_Data_ProgressBarData_ProgressBarPrefab
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.ProgressBarPrefab
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.ProgressBarPrefab
-  nameWithType: ProgressBarData.ProgressBarPrefab
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.ProgressBarType
-  name: ProgressBarType
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html#Studio23_SS2_SceneLoadingSystem_Data_ProgressBarData_ProgressBarType
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.ProgressBarType
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.ProgressBarType
-  nameWithType: ProgressBarData.ProgressBarType
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType
-  name: ProgressBarType
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html
-  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType
-  nameWithType: ProgressBarType
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Circular
-  name: Circular
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html#Studio23_SS2_SceneLoadingSystem_Data_ProgressBarType_Circular
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Circular
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Circular
-  nameWithType: ProgressBarType.Circular
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Horizontal
-  name: Horizontal
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html#Studio23_SS2_SceneLoadingSystem_Data_ProgressBarType_Horizontal
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Horizontal
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Horizontal
-  nameWithType: ProgressBarType.Horizontal
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Looping
-  name: Looping
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html#Studio23_SS2_SceneLoadingSystem_Data_ProgressBarType_Looping
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Looping
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.Looping
-  nameWithType: ProgressBarType.Looping
-- uid: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.None
-  name: None
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html#Studio23_SS2_SceneLoadingSystem_Data_ProgressBarType_None
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.None
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.None
-  nameWithType: ProgressBarType.None
 - uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable
   name: SceneTable
   href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html
   commentId: T:Studio23.SS2.SceneLoadingSystem.Data.SceneTable
   fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable
   nameWithType: SceneTable
-- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene1
-  name: Scene1
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_Scene1
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene1
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene1
-  nameWithType: SceneTable.Scene1
-- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene2
-  name: Scene2
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_Scene2
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene2
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene2
-  nameWithType: SceneTable.Scene2
-- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene3
-  name: Scene3
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_Scene3
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene3
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.Scene3
-  nameWithType: SceneTable.Scene3
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene1
+  name: DummyScene1
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_DummyScene1
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene1
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene1
+  nameWithType: SceneTable.DummyScene1
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene2
+  name: DummyScene2
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_DummyScene2
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene2
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene2
+  nameWithType: SceneTable.DummyScene2
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.ScriptScene
+  name: ScriptScene
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_ScriptScene
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.ScriptScene
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.ScriptScene
+  nameWithType: SceneTable.ScriptScene
 - uid: Studio23.SS2.SceneLoadingSystem.Data.TextData
   name: TextData
   href: api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html
@@ -595,6 +546,32 @@ references:
   commentId: T:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI
   fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI
   nameWithType: AbstractLoadingScreenUI
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CheckIfKeyPressRequired
+  name: CheckIfKeyPressRequired()
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_CheckIfKeyPressRequired
+  commentId: M:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CheckIfKeyPressRequired
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CheckIfKeyPressRequired()
+  nameWithType: AbstractLoadingScreenUI.CheckIfKeyPressRequired()
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CheckIfKeyPressRequired*
+  name: CheckIfKeyPressRequired
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_CheckIfKeyPressRequired_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CheckIfKeyPressRequired
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CheckIfKeyPressRequired
+  nameWithType: AbstractLoadingScreenUI.CheckIfKeyPressRequired
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CrossFadeBackGroundImages
+  name: CrossFadeBackGroundImages()
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_CrossFadeBackGroundImages
+  commentId: M:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CrossFadeBackGroundImages
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CrossFadeBackGroundImages()
+  nameWithType: AbstractLoadingScreenUI.CrossFadeBackGroundImages()
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CrossFadeBackGroundImages*
+  name: CrossFadeBackGroundImages
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_CrossFadeBackGroundImages_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CrossFadeBackGroundImages
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.CrossFadeBackGroundImages
+  nameWithType: AbstractLoadingScreenUI.CrossFadeBackGroundImages
 - uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.Initialize
   name: Initialize()
   href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_Initialize
@@ -608,6 +585,19 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.Initialize
   nameWithType: AbstractLoadingScreenUI.Initialize
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnAnyKeyPress
+  name: OnAnyKeyPress()
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_OnAnyKeyPress
+  commentId: M:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnAnyKeyPress
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnAnyKeyPress()
+  nameWithType: AbstractLoadingScreenUI.OnAnyKeyPress()
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnAnyKeyPress*
+  name: OnAnyKeyPress
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_OnAnyKeyPress_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnAnyKeyPress
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnAnyKeyPress
+  nameWithType: AbstractLoadingScreenUI.OnAnyKeyPress
 - uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnLoadingDone
   name: OnLoadingDone()
   href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_OnLoadingDone
@@ -627,6 +617,32 @@ references:
   commentId: F:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnValidAnyKeyPressEvent
   fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnValidAnyKeyPressEvent
   nameWithType: AbstractLoadingScreenUI.OnValidAnyKeyPressEvent
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.ShowHint
+  name: ShowHint()
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_ShowHint
+  commentId: M:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.ShowHint
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.ShowHint()
+  nameWithType: AbstractLoadingScreenUI.ShowHint()
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.ShowHint*
+  name: ShowHint
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_ShowHint_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.ShowHint
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.ShowHint
+  nameWithType: AbstractLoadingScreenUI.ShowHint
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.TextStyling(Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData,TextMeshProUGUI)
+  name: TextStyling(BaseTextStyleData, TextMeshProUGUI)
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_TextStyling_Studio23_SS2_SceneLoadingSystem_Data_BaseTextStyleData_TextMeshProUGUI_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.TextStyling(Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData,TextMeshProUGUI)
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.TextStyling(Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData, TextMeshProUGUI)
+  nameWithType: AbstractLoadingScreenUI.TextStyling(BaseTextStyleData, TextMeshProUGUI)
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.TextStyling*
+  name: TextStyling
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_TextStyling_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.TextStyling
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.TextStyling
+  nameWithType: AbstractLoadingScreenUI.TextStyling
 - uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.UpdateProgress(System.Single)
   name: UpdateProgress(float)
   href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_UpdateProgress_System_Single_

@@ -105,10 +105,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.yml",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenData.html"
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html"
         }
       },
       "version": ""
@@ -119,26 +119,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarData.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.ProgressBarType.html"
         }
       },
       "version": ""
