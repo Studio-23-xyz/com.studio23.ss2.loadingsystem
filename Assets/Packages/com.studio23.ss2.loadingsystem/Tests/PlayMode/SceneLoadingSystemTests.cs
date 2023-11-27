@@ -9,11 +9,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
+using Object = UnityEngine.Object;
 
 public class SceneLoadingSystemTests
 {
     private readonly InputTestFixture input = new();
-
+    private SceneLoadingSystem _sceneLoadingSystem;
 
     [UnityTest]
     [Order(0)]
@@ -21,7 +22,10 @@ public class SceneLoadingSystemTests
     {
         return UniTask.ToCoroutine(async () =>
         {
-            new GameObject().AddComponent<SceneLoadingSystem>();
+            _sceneLoadingSystem = new GameObject().AddComponent<SceneLoadingSystem>();
+
+
+
             SceneLoadingSystem.Instance._loadingScreenPrefab =
                 Resources.Load<GameObject>("Prefabs/LoadingScreenWithLoopingImage"); //TODO
             await SceneLoadingSystem.Instance.LoadSceneWithoutLoadingScreen(SceneTable.DummyScene1);
@@ -95,6 +99,14 @@ public class SceneLoadingSystemTests
             Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.DummyScene2).isLoaded);
         });
     }
+
+    [TearDown]
+    public void ClearTestData()
+    {
+        input.TearDown();
+        Object.Destroy(_sceneLoadingSystem);
+    }
+
 
 
     private void PressKey()
