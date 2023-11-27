@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Studio23.SS2.SceneLoadingSystem.Core;
+using Studio23.SS2.SceneLoadingSystem.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
@@ -12,10 +13,11 @@ using UnityEngine.TestTools;
 
 public class SceneLoadingSystemTests
 {
+
     [UnitySetUp]
     public IEnumerator TestSetup()
     {
-        SceneManager.LoadScene("Scene 1");
+        SceneManager.LoadScene(SceneTable.Scene1);
         yield return null;
     }
 
@@ -23,19 +25,19 @@ public class SceneLoadingSystemTests
     [Order(0)]
     public IEnumerator LoadSingleScene()
     {
-        SceneLoadingSystem.Instance.LoadScene("Scene 2");
+        SceneLoadingSystem.Instance.LoadScene(SceneTable.Scene2);
         yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
+        Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.Scene2).isLoaded);
     }
 
     [UnityTest]
     [Order(1)]
     public IEnumerator LoadSingleSceneWithInput()
     {
-        SceneLoadingSystem.Instance.LoadScene("Scene 2");
+        SceneLoadingSystem.Instance.LoadScene(SceneTable.Scene2);
         yield return WaitForInput();
         //yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
+        Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.Scene2).isLoaded);
     }
 
 
@@ -44,10 +46,10 @@ public class SceneLoadingSystemTests
 
     public IEnumerator LoadMultipleScenes()
     {
-        SceneLoadingSystem.Instance.LoadScenes(new List<string> { "Scene 2", "Scene 3" });
+        SceneLoadingSystem.Instance.LoadScenes(new List<string> { SceneTable.Scene2, SceneTable.Scene3 });
         yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 3").isLoaded);
+        Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.Scene2).isLoaded);
+        Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.Scene3).isLoaded);
     }
 
 
@@ -55,11 +57,11 @@ public class SceneLoadingSystemTests
     [Order(3)]
     public IEnumerator LoadMultipleScenesWithInput()
     {
-        SceneLoadingSystem.Instance.LoadScenes(new List<string> { "Scene 2", "Scene 3" });
+        SceneLoadingSystem.Instance.LoadScenes(new List<string> { SceneTable.Scene2, SceneTable.Scene3 });
         yield return WaitForInput();
         //yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 3").isLoaded);
+        Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.Scene2).isLoaded);
+        Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.Scene3).isLoaded);
     }
 
 
@@ -67,9 +69,9 @@ public class SceneLoadingSystemTests
     [Order(4)]
     public IEnumerator LoadSceneWithoutLoadingScreen() => UniTask.ToCoroutine(async () =>
     {
-        await SceneLoadingSystem.Instance.LoadSceneWithoutLoadingScreen("Scene 2");
+        await SceneLoadingSystem.Instance.LoadSceneWithoutLoadingScreen(SceneTable.Scene2);
         await UniTask.Delay(TimeSpan.FromSeconds(2f));
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
+        Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.Scene2).isLoaded);
     });
 
 
@@ -77,13 +79,13 @@ public class SceneLoadingSystemTests
     [Order(5)]
     public IEnumerator UnloadScene() => UniTask.ToCoroutine(async () =>
     {
-        SceneLoadingSystem.Instance.LoadScene("Scene 2");
+        SceneLoadingSystem.Instance.LoadScene(SceneTable.Scene2);
         await UniTask.Delay(TimeSpan.FromSeconds(2f));
 
-        await SceneLoadingSystem.Instance.UnloadScene("Scene 2");
+        await SceneLoadingSystem.Instance.UnloadScene(SceneTable.Scene2);
         await UniTask.Delay(TimeSpan.FromSeconds(2f));
 
-        Assert.IsFalse(SceneManager.GetSceneByName("Scene 2").isLoaded);
+        Assert.IsFalse(SceneManager.GetSceneByName(SceneTable.Scene2).isLoaded);
     });
 
     private IEnumerator WaitForInput()

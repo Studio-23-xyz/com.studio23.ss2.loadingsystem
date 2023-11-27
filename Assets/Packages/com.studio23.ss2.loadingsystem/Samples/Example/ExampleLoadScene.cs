@@ -8,8 +8,8 @@ public class ExampleLoadScene : MonoBehaviour
     public void LoadScene()
     {
         List<string> sceneToLoad = new List<string>();
-        sceneToLoad.Add(SceneTable.Scene2);
-        sceneToLoad.Add(SceneTable.Scene3);
+        sceneToLoad.Add(FakeSceneTable.FakeScene2);
+        sceneToLoad.Add(FakeSceneTable.FakeScene3);
         SceneLoadingSystem.Instance.LoadScenes(sceneToLoad);
     }
 }
