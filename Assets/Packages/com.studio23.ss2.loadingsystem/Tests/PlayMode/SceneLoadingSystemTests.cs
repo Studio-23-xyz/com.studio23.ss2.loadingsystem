@@ -4,97 +4,114 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Studio23.SS2.SceneLoadingSystem.Core;
+using Studio23.SS2.SceneLoadingSystem.Data;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Utilities;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
+using Object = UnityEngine.Object;
 
 public class SceneLoadingSystemTests
 {
-    [UnitySetUp]
-    public IEnumerator TestSetup()
-    {
-        SceneManager.LoadScene("Scene 1");
-        yield return null;
-    }
+    private readonly InputTestFixture input = new();
+    private SceneLoadingSystem _sceneLoadingSystem;
 
     [UnityTest]
     [Order(0)]
     public IEnumerator LoadSingleScene()
     {
-        SceneLoadingSystem.Instance.LoadScene("Scene 2");
-        yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
+        return UniTask.ToCoroutine(async () =>
+        {
+            _sceneLoadingSystem = new GameObject().AddComponent<SceneLoadingSystem>();
+
+
+
+            SceneLoadingSystem.Instance._loadingScreenPrefab =
+                Resources.Load<GameObject>("Prefabs/LoadingScreenWithLoopingImage"); //TODO
+            await SceneLoadingSystem.Instance.LoadSceneWithoutLoadingScreen(SceneTable.DummyScene1);
+            await UniTask.Delay(TimeSpan.FromSeconds(2f)); //RISK
+            Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+        });
     }
+
 
     [UnityTest]
     [Order(1)]
-    public IEnumerator LoadSingleSceneWithInput()
+    public IEnumerator UnloadScene()
     {
-        SceneLoadingSystem.Instance.LoadScene("Scene 2");
-        yield return WaitForInput();
-        //yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
+        return UniTask.ToCoroutine(async () =>
+        {
+            
+            await SceneLoadingSystem.Instance.UnloadScene(SceneTable.DummyScene1);
+            await UniTask.Delay(TimeSpan.FromSeconds(2f));
+
+            Assert.IsFalse(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+        });
     }
 
 
     [UnityTest]
     [Order(2)]
-
-    public IEnumerator LoadMultipleScenes()
+    public IEnumerator LoadSingleSceneWithInput()
     {
-        SceneLoadingSystem.Instance.LoadScenes(new List<string> { "Scene 2", "Scene 3" });
-        yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 3").isLoaded);
+        return UniTask.ToCoroutine(async () =>
+        {
+            input.Setup();
+            await SceneLoadingSystem.Instance.LoadScene(SceneTable.DummyScene1);
+            await UniTask.Delay(TimeSpan.FromSeconds(2f)); //RISK
+            Assert.IsFalse(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+            PressKey();
+            await UniTask.Delay(TimeSpan.FromSeconds(1f));
+            Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+
+        });
     }
 
 
     [UnityTest]
     [Order(3)]
-    public IEnumerator LoadMultipleScenesWithInput()
+    public IEnumerator UnloadScene_2()
     {
-        SceneLoadingSystem.Instance.LoadScenes(new List<string> { "Scene 2", "Scene 3" });
-        yield return WaitForInput();
-        //yield return new WaitForSeconds(2f);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 3").isLoaded);
+        return UniTask.ToCoroutine(async () =>
+        {
+            Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+            await SceneLoadingSystem.Instance.UnloadScene(SceneTable.DummyScene1);
+            await UniTask.Delay(TimeSpan.FromSeconds(2f));
+
+            Assert.IsFalse(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+        });
     }
+
 
 
     [UnityTest]
     [Order(4)]
-    public IEnumerator LoadSceneWithoutLoadingScreen() => UniTask.ToCoroutine(async () =>
+    public IEnumerator LoadMultipleScenes()
     {
-        await SceneLoadingSystem.Instance.LoadSceneWithoutLoadingScreen("Scene 2");
-        await UniTask.Delay(TimeSpan.FromSeconds(2f));
-        Assert.IsTrue(SceneManager.GetSceneByName("Scene 2").isLoaded);
-    });
-
-
-    [UnityTest]
-    [Order(5)]
-    public IEnumerator UnloadScene() => UniTask.ToCoroutine(async () =>
-    {
-        SceneLoadingSystem.Instance.LoadScene("Scene 2");
-        await UniTask.Delay(TimeSpan.FromSeconds(2f));
-
-        await SceneLoadingSystem.Instance.UnloadScene("Scene 2");
-        await UniTask.Delay(TimeSpan.FromSeconds(2f));
-
-        Assert.IsFalse(SceneManager.GetSceneByName("Scene 2").isLoaded);
-    });
-
-    private IEnumerator WaitForInput()
-    {
-        bool isPressed = false;
-
-        InputSystem.onAnyButtonPress.CallOnce(ctrl => isPressed = true);
-
-        while (!isPressed)
+        return UniTask.ToCoroutine(async () =>
         {
-            yield return null;
-        }
+            await SceneLoadingSystem.Instance.LoadScenes(new List<string> { SceneTable.DummyScene1, SceneTable.DummyScene2 });
+            Assert.IsFalse(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+            await UniTask.Delay(TimeSpan.FromSeconds(2f)); //RISK
+            PressKey();
+            await UniTask.Delay(TimeSpan.FromSeconds(1f)); //RISK
+            Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.DummyScene1).isLoaded);
+            Assert.IsTrue(SceneManager.GetSceneByName(SceneTable.DummyScene2).isLoaded);
+        });
+    }
+
+    [TearDown]
+    public void ClearTestData()
+    {
+        input.TearDown();
+        Object.Destroy(_sceneLoadingSystem);
+    }
+
+
+
+    private void PressKey()
+    {
+        var key = InputSystem.AddDevice<Keyboard>();
+        input.Press(key.aKey);
     }
 }
