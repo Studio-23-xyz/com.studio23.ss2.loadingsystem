@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/LoadingScene
+    path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Demo1/Example/LoadingScene
       1.unity
     guid: 9ffb0a7772f13a8428ca08058dc6a8a7
   - enabled: 1
@@ -22,11 +22,11 @@ EditorBuildSettings:
       3.unity
     guid: d71873e2c5870394cae4352ac5c935aa
   - enabled: 1
-    path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/FakeScene
+    path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Demo1/Example/FakeScene
       2.unity
     guid: c9edd72fb6f130f4e8074eb4bfb4dac7
   - enabled: 1
-    path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/FakeScene
+    path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Demo1/Example/FakeScene
       3.unity
     guid: e83f34f3653d266499302785b292f96e
   m_configObjects: {}

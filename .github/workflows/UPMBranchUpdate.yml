@@ -1,40 +1,45 @@
-name: Update and Publish UPM Branch
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  update-and-tag:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Find package.json
-      id: find-package-json
-      run: echo ::set-output name=package-json-path::$(find . -name "package.json" | head -n 1)
-
-    - name: Get Package Name from package.json
-      id: get-package-name
-      run: echo ::set-output name=package-name::$(jq -r .name ${{ steps.find-package-json.outputs.package-json-path }})
-
-    - name: Git Subtree Split
-      run: git subtree split -P Assets/Packages/${{ steps.get-package-name.outputs.package-name }}/ -b upm
-
-
-    - name: Get Version from package.json
-      id: get-version
-      run: echo ::set-output name=version::$(jq -r .version ${{ steps.find-package-json.outputs.package-json-path }})
-
-    - name: Create Git Tag
-      if: steps.get-version.outputs.version != ''
-      run: git tag v${{ steps.get-version.outputs.version }} upm
-
-    - name: Push Branch and Tags
-      run: |
-        git checkout upm
-        git push -f -u origin upm
-        git push --tags
+{
+    "name": "com.studio23.ss2.addressablechunkloadersystem",
+    "version": "1.0.4",
+    "displayName": "Addressable Chunk Loader System",
+    "description": "Addressable Chunk/Room Loader System using addressables we made for SS2",
+    "unity": "2022.3",
+    "unityRelease": "10f1",
+    "documentationUrl": " https://studio-23-xyz.github.io/com.studio23.ss2.addressablechunkloadersystem/manual/",
+    "changelogUrl": "https://studio-23-xyz.github.io/com.studio23.ss2.addressablechunkloadersystem/changelog/CHANGELOG.html",
+    "licensesUrl": "https://studio-23-xyz.github.io/com.studio23.ss2.addressablechunkloadersystem/license/LICENSE.html",
+    "scopedRegistries":  [
+      {
+        "name": "Studio 23",
+        "url": "https://package.openupm.com",
+        "scopes": [
+          "com.studio23.ss2"
+        ]
+      }], 
+    "dependencies": {
+        "com.bdeshi.helpers": "1.0.0",
+        "com.cysharp.unitask": "2.4.1",
+        "com.dbrizov.naughtyattributes": "2.1.4"
+   },
+   "keywords": [
+      "Scene loading System",
+      "Addressable"
+    ],
+  "samples": [
+      {
+        "displayName": "Functional Example",
+        "description": "Sample scene with multiple floors and rooms and lightmap setup.",
+        "path": "Samples~/AddressableChunkLoaderSystem.Sample1"
+      }
+    ],  
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Studio-23-xyz/com.studio23.ss2.addressablechunkloadersystem.git"    
+    },
+    "license": "MIT",  
+    "author": {
+      "name": "Studio 23",
+      "email": "contact@studio-23.xyz",
+      "url": "https://studio-23.xyz"
+    }
+  }

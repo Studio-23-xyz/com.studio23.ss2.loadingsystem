@@ -1,6 +1,6 @@
 {
     "name": "com.studio23.ss2.loadingsystem",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Scene Loading System",
     "description": "Loading system is used for to load scene, create different type of loading screen between scene switches, create different type of hints to show between loading screen. ",
     "unity": "2022.3",
@@ -26,6 +26,14 @@
         "Loading",
         "System"
     ],
+	  "samples": [
+      {
+        "displayName": "Example",
+        "description": "Sample scene with multiple floors and rooms and lightmap setup.",
+        "path": "Samples~/Demo1"
+      }
+    ],  
+	
     "repository": {
         "type": "git",
         "url": "https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem.git"
