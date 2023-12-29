@@ -220,15 +220,15 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene
   nameWithType: SceneLoadingSystem.LoadScene
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String)
-  name: LoadSceneWithoutLoadingScreen(string)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_System_String_
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String)
-  name.vb: LoadSceneWithoutLoadingScreen(String)
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(string)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(String)
-  nameWithType: SceneLoadingSystem.LoadSceneWithoutLoadingScreen(string)
-  nameWithType.vb: SceneLoadingSystem.LoadSceneWithoutLoadingScreen(String)
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String,LoadSceneMode)
+  name: LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_System_String_LoadSceneMode_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String,LoadSceneMode)
+  name.vb: LoadSceneWithoutLoadingScreen(String, LoadSceneMode)
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
+  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(String, LoadSceneMode)
+  nameWithType: SceneLoadingSystem.LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
+  nameWithType.vb: SceneLoadingSystem.LoadSceneWithoutLoadingScreen(String, LoadSceneMode)
 - uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen*
   name: LoadSceneWithoutLoadingScreen
   href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_
@@ -617,6 +617,19 @@ references:
   commentId: F:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnValidAnyKeyPressEvent
   fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.OnValidAnyKeyPressEvent
   nameWithType: AbstractLoadingScreenUI.OnValidAnyKeyPressEvent
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.RemoveLoadingScreen
+  name: RemoveLoadingScreen()
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_RemoveLoadingScreen
+  commentId: M:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.RemoveLoadingScreen
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.RemoveLoadingScreen()
+  nameWithType: AbstractLoadingScreenUI.RemoveLoadingScreen()
+- uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.RemoveLoadingScreen*
+  name: RemoveLoadingScreen
+  href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_RemoveLoadingScreen_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.RemoveLoadingScreen
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.RemoveLoadingScreen
+  nameWithType: AbstractLoadingScreenUI.RemoveLoadingScreen
 - uid: Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.ShowHint
   name: ShowHint()
   href: api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html#Studio23_SS2_SceneLoadingSystem_UI_AbstractLoadingScreenUI_ShowHint
