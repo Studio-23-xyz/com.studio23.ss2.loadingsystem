@@ -1,5 +1,15 @@
 # Changelog
 
+## [v1.0.1] - 2023-12-29
+
+### Added
+
+- Added new event to handle loading screen
+- Added loading scene mode to single loading screen method 
+- Fixed UI bugs
+
+
+
 
 ## [v1.0.0] - 2023-11-27
 

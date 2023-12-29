@@ -16,12 +16,14 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 
         internal ProgressEvent OnSceneProgress;
         internal UnityEvent OnSceneLoadingComplete;
+        internal UnityEvent OnSceneActivationComplete;
 
 
         internal SceneLoader(List<string> scenesToLoad,LoadSceneMode sceneLoadingMode)
         {
             OnSceneProgress = new ProgressEvent();
             OnSceneLoadingComplete = new UnityEvent();
+            OnSceneActivationComplete = new UnityEvent();
             _scenesToLoad = scenesToLoad;
             _sceneLoadingMode = sceneLoadingMode;
             _asyncOperation = new List<AsyncOperation>();
@@ -47,16 +49,30 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
                 await UniTask.Yield();
             }
             OnSceneProgress?.Invoke(1.0f);
-            await UniTask.NextFrame();
+
+            await UniTask.WaitForFixedUpdate();
+
             OnSceneLoadingComplete?.Invoke();
         }
 
-        internal void ActivateScenes()
+        internal async void ActivateScenes()
         {
             foreach (var operation in _asyncOperation)
             {
                 operation.allowSceneActivation = true;
             }
+
+            foreach (var operation in _asyncOperation)
+            {
+                while (!operation.isDone)
+                {
+                    await UniTask.Yield();
+
+                }
+            }
+
+            OnSceneActivationComplete?.Invoke();
         }
+
     }
 }

@@ -53,13 +53,15 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
             CrossFadeBackGroundImages();
         }
 
+
+
         public void OnLoadingDone()
         {
             _hintCancelTokenSource.Cancel();
             _backgroundImageCancelTokenSource.Cancel();
             _hintHeaderText.text = string.Empty;
             _hintDescriptionText.text = string.Empty;
-            _pressAnyKeyText.gameObject.SetActive(true);
+            _pressAnyKeyText.gameObject.SetActive(_needKeyPress);
             CheckIfKeyPressRequired();
         }
 
@@ -74,7 +76,13 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
             _onKeyPressEvent?.Dispose();
             Debug.Log("Any Key Pressed");
             OnValidAnyKeyPressEvent?.Invoke();
-            Destroy(gameObject,.1f);
+
+        }
+
+        public void RemoveLoadingScreen()
+        {
+            Destroy(gameObject, .1f);
+
         }
 
         public virtual void UpdateProgress(float progress){}
