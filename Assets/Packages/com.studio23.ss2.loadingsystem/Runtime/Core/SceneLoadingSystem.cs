@@ -55,9 +55,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         /// </summary>
         /// <param name="scene"></param>
         /// <returns></returns>
-        public async UniTask LoadSceneWithoutLoadingScreen(string scene)
+        public async UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = LoadSceneMode.Additive)
         {
-            SceneLoader sceneLoader = new SceneLoader(new List<string> { scene }, LoadSceneMode.Additive);
+            SceneLoader sceneLoader = new SceneLoader(new List<string> { scene }, sceneMode);
             sceneLoader.OnSceneLoadingComplete.AddListener(sceneLoader.ActivateScenes);
             await sceneLoader.LoadSceneAsync();
         }
@@ -92,6 +92,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             sceneLoader.OnSceneProgress.AddListener(loadingScreen.UpdateProgress);
             sceneLoader.OnSceneLoadingComplete.AddListener(loadingScreen.OnLoadingDone);
             loadingScreen.OnValidAnyKeyPressEvent.AddListener(sceneLoader.ActivateScenes);
+            sceneLoader.OnSceneActivationComplete.AddListener(loadingScreen.RemoveLoadingScreen);
             await sceneLoader.LoadSceneAsync();
         }
     }
