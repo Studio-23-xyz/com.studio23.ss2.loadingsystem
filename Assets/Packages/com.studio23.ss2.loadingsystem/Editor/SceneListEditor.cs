@@ -39,7 +39,8 @@ namespace Studio23.SS2.SceneLoadingSystem.Editor
 
             foreach (var scene in sceneNames)
             {
-                var sceneName = scene.Replace(" ", "");
+                var sceneName = $"Scene_";
+                sceneName += scene.Replace(" ", "");
                 scriptContent += $"\t\tpublic static readonly string {sceneName} = \"{scene}\";\n";
             }
 
