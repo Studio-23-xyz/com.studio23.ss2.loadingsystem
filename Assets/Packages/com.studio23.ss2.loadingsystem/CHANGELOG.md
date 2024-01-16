@@ -1,5 +1,12 @@
 # Changelog
 
+
+## [v1.0.2] - 2024-01-16
+
+### Added
+
+- Fixed Editor Script bugs
+
 ## [v1.0.1] - 2023-12-29
 
 ### Added
