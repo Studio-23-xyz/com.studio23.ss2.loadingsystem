@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [v1.0.3] - 2024-01-16
+
+### Added
+
+- Added function to make any scene active
+
+
 ## [v1.0.2] - 2024-01-16
 
 ### Added
