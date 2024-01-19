@@ -166,8 +166,8 @@
 
   <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScene_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScene_System_String_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene(System.String)">
-  LoadScene(string)
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScene_System_String_System_Boolean_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene(System.String,System.Boolean)">
+  LoadScene(string, bool)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -176,12 +176,14 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask LoadScene(string scene)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask LoadScene(string scene, bool makeSceneActive = false)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>scene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>makeSceneActive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -203,8 +205,8 @@
 
   <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_System_String_LoadSceneMode_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String,LoadSceneMode)">
-  LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_System_String_LoadSceneMode_System_Boolean_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String,LoadSceneMode,System.Boolean)">
+  LoadSceneWithoutLoadingScreen(string, LoadSceneMode, bool)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -213,7 +215,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = null, bool makeSceneActive = false)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -221,6 +223,8 @@
     <dt><code>scene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>sceneMode</code> <span class="xref">LoadSceneMode</span></dt>
+    <dd></dd>
+    <dt><code>makeSceneActive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -242,8 +246,8 @@
 
   <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_System_Collections_Generic_List_System_String__" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{System.String})">
-  LoadScenes(List&lt;string&gt;)
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_System_Collections_Generic_List_System_String__System_Boolean_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{System.String},System.Boolean)">
+  LoadScenes(List&lt;string&gt;, bool)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -252,12 +256,14 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask LoadScenes(List&lt;string&gt; scenes)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask LoadScenes(List&lt;string&gt; scenes, bool makeSceneActive = false)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>scenes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>makeSceneActive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -266,6 +272,37 @@
     <dt><span class="xref">UniTask</span></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene*"></a>
+
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_System_String_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(System.String)">
+  SetActiveScene(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveScene(string sceneName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sceneName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
 
 
 
