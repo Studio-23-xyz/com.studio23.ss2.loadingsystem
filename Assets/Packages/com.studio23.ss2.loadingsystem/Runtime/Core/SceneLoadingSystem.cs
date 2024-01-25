@@ -35,9 +35,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         /// </summary>
         /// <param name="scene"></param>
         /// <returns></returns>
-        public async UniTask LoadScene(string scene, bool makeSceneActive = false)
+        public async UniTask LoadScene(string scene)
         {
-            await LoadScenes(new List<string> { scene}, makeSceneActive);
+            await LoadScenes(new List<string> { scene});
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         /// </summary>
         /// <param name="scenes"></param>
         /// <returns></returns>
-        public async UniTask LoadScenes(List<string> scenes, bool makeSceneActive = false)
+        public async UniTask LoadScenes(List<string> scenes)
         {
-            await LoadScenes(scenes, LoadSceneMode.Additive,makeSceneActive);
+            await LoadScenes(scenes, LoadSceneMode.Additive);
         }
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         /// </summary>
         /// <param name="scene"></param>
         /// <returns></returns>
-        public async UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = LoadSceneMode.Additive, bool makeSceneActive = false)
+        public async UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = LoadSceneMode.Additive)
         {
-            SceneLoader sceneLoader = new SceneLoader(new List<string> { scene }, sceneMode, makeSceneActive);
+            SceneLoader sceneLoader = new SceneLoader(new List<string> { scene }, sceneMode);
             sceneLoader.OnSceneLoadingComplete.AddListener(sceneLoader.ActivateScenes);
             await sceneLoader.LoadSceneAsync();
         }
@@ -84,11 +84,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             }
         }
 
-        private async UniTask LoadScenes(List<string> scenes,LoadSceneMode sceneMode, bool makeSceneActive = false)
+        private async UniTask LoadScenes(List<string> scenes,LoadSceneMode sceneMode)
         {
             AbstractLoadingScreenUI loadingScreen= Instantiate(_loadingScreenPrefab).GetComponent<AbstractLoadingScreenUI>();
             loadingScreen.Initialize();
-            SceneLoader sceneLoader= new SceneLoader(scenes,sceneMode, makeSceneActive);
+            SceneLoader sceneLoader= new SceneLoader(scenes,sceneMode);
             sceneLoader.OnSceneProgress.AddListener(loadingScreen.UpdateProgress);
             sceneLoader.OnSceneLoadingComplete.AddListener(loadingScreen.OnLoadingDone);
             loadingScreen.OnValidAnyKeyPressEvent.AddListener(sceneLoader.ActivateScenes);
@@ -96,9 +96,12 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             await sceneLoader.LoadSceneAsync();
         }
 
-        public void SetActiveScene(string sceneName)
+        public async UniTask SetActiveScene(string activeScene)
         {
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+            Scene sceneToActivate = SceneManager.GetSceneByName(activeScene);
+            if(!sceneToActivate.IsValid()) return;
+            await UniTask.WaitUntil(() => sceneToActivate.isLoaded);
+            SceneManager.SetActiveScene(sceneToActivate);
         }
     }
 }
