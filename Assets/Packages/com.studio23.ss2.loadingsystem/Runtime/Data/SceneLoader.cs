@@ -42,12 +42,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
                 tempOperation.allowSceneActivation = false;
                 _asyncOperation.Add(tempOperation);
             }
-            //while (!_asyncOperation.TrueForAll(r => r.progress >= 0.9f))
-            //{
-            //    float averageProgress = _asyncOperation.Average(r => r.progress);
-            //    OnSceneProgress?.Invoke(averageProgress);
-            //    await UniTask.Yield();
-            //}
 
             while (!_asyncOperation.TrueForAll(r => r.progress >= 0.9f))
             {
