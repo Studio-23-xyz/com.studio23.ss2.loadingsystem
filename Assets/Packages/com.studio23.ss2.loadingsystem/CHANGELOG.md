@@ -1,5 +1,16 @@
 # Changelog
 
+## [v1.0.4] - 2024-01-25
+
+### Added
+
+- Added separate function to make scene active
+- Added more separate function to handle single and multiple scene loading and unloading
+
+### Patch
+
+- Removed scene active parameter from loading scene functionality
+
 
 ## [v1.0.3] - 2024-01-16
 

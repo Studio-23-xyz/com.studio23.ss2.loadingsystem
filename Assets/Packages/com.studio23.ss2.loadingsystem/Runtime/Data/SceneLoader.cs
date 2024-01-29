@@ -19,7 +19,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         internal UnityEvent OnSceneActivationComplete;
 
 
-        internal SceneLoader(List<string> scenesToLoad,LoadSceneMode sceneLoadingMode, bool makeSceneActive)
+        internal SceneLoader(List<string> scenesToLoad,LoadSceneMode sceneLoadingMode)
         {
             OnSceneProgress = new ProgressEvent();
             OnSceneLoadingComplete = new UnityEvent();
@@ -27,12 +27,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
             _scenesToLoad = scenesToLoad;
             _sceneLoadingMode = sceneLoadingMode;
             _asyncOperation = new List<AsyncOperation>();
-
-            if(makeSceneActive)
-                OnSceneActivationComplete.AddListener((() =>
-                {
-                    SetActiveScene(scenesToLoad[0]);
-                }));
         }
 
         internal static async UniTask UnloadScene(string scene)
@@ -48,12 +42,14 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
                 tempOperation.allowSceneActivation = false;
                 _asyncOperation.Add(tempOperation);
             }
+
             while (!_asyncOperation.TrueForAll(r => r.progress >= 0.9f))
             {
                 float averageProgress = _asyncOperation.Average(r => r.progress);
                 OnSceneProgress?.Invoke(averageProgress);
                 await UniTask.Yield();
             }
+
             OnSceneProgress?.Invoke(1.0f);
 
             await UniTask.WaitForFixedUpdate();
@@ -76,15 +72,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 
                 }
             }
-
             OnSceneActivationComplete?.Invoke();
         }
-
-
-        internal void SetActiveScene(string activeScene)
-        {
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(activeScene));
-        }
-
     }
 }

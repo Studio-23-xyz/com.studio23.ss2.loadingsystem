@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class ExampleLoadScene : MonoBehaviour
 {
-    public void LoadScene()
+    public async void LoadScene()
     {
         List<string> sceneToLoad = new List<string>();
         sceneToLoad.Add(FakeSceneTable.FakeScene2);
         sceneToLoad.Add(FakeSceneTable.FakeScene3);
-        SceneLoadingSystem.Instance.LoadScenes(sceneToLoad);
+        await SceneLoadingSystem.Instance.LoadScenes(sceneToLoad);
+        await SceneLoadingSystem.Instance.SetActiveScene(FakeSceneTable.FakeScene2);
     }
 }
