@@ -19,13 +19,13 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         internal UnityEvent OnSceneActivationComplete;
 
 
-        internal SceneLoader(List<string> scenesToLoad,LoadSceneMode sceneLoadingMod)
+        internal SceneLoader(List<string> scenesToLoad,LoadSceneMode sceneLoadingMode)
         {
             OnSceneProgress = new ProgressEvent();
             OnSceneLoadingComplete = new UnityEvent();
             OnSceneActivationComplete = new UnityEvent();
             _scenesToLoad = scenesToLoad;
-            _sceneLoadingMode = sceneLoadingMod;
+            _sceneLoadingMode = sceneLoadingMode;
             _asyncOperation = new List<AsyncOperation>();
         }
 
