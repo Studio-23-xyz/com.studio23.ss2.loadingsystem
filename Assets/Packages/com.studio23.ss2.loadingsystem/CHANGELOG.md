@@ -5,6 +5,7 @@
 ### Added
 
 - Added separate function to make scene active
+- Added more separate function to handle single and multiple scene loading and unloading
 
 ### Patch
 
