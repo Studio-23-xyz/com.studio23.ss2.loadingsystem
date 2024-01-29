@@ -127,6 +127,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             await sceneLoader.LoadSceneAsync();
         }
 
+        /// <summary>
+        /// Make a single scene active
+        /// </summary>
         public async UniTask SetActiveScene(string activeScene)
         {
             Scene sceneToActivate = SceneManager.GetSceneByName(activeScene);
