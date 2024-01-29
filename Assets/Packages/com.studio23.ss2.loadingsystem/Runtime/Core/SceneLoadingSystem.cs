@@ -31,7 +31,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         }
 
         /// <summary>
-        /// Load a single scene by scene name
+        /// Load a single sceneToUnload by sceneToUnload name
         /// </summary>
         /// <param name="scene"></param>
         /// <returns></returns>
@@ -41,7 +41,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         }
 
         /// <summary>
-        /// Load multiple scenes by a list of scene name
+        /// Load multiple scenes by a list of sceneToUnload name
         /// </summary>
         /// <param name="scenes"></param>
         /// <returns></returns>
@@ -51,19 +51,28 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         }
 
         /// <summary>
-        /// Load a single scene by scene name without loading screen
+        /// Load a single sceneToUnload by sceneToUnload name without loading screen
         /// </summary>
         /// <param name="scene"></param>
         /// <returns></returns>
         public async UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = LoadSceneMode.Additive)
         {
-            SceneLoader sceneLoader = new SceneLoader(new List<string> { scene }, sceneMode);
-            sceneLoader.OnSceneLoadingComplete.AddListener(sceneLoader.ActivateScenes);
-            await sceneLoader.LoadSceneAsync();
+            await LoadWithoutLoadingScreen(new List<string> { scene }, sceneMode);
+        }
+
+
+        /// <summary>
+        /// Load multiple scenes by sceneToUnload name without loading screen
+        /// </summary>
+        /// <param name="scene"></param>
+        /// <returns></returns>
+        public async UniTask LoadScenesWithoutLoadingScreen(List<string> scene, LoadSceneMode sceneMode = LoadSceneMode.Additive)
+        {
+            await LoadWithoutLoadingScreen(scene, sceneMode);
         }
 
         /// <summary>
-        /// Unload a scene by scene name
+        /// Unload a sceneToUnload by sceneToUnload name
         /// </summary>
         /// <param name="scene"></param>
         /// <returns></returns>
@@ -73,7 +82,22 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         }
 
         /// <summary>
-        /// Unload all scene from build settings
+        /// Unload multiple by sceneToUnload name
+        /// </summary>
+        /// <param name="sceneToUnload"></param>
+        /// <returns></returns>
+        public async UniTask UnloadScenes(List<string> sceneToUnload)
+        {
+            List<UniTask> sceneToUnloadsTask = new List<UniTask>();
+            foreach (var scene in sceneToUnload)
+            {
+                sceneToUnloadsTask.Add(SceneLoader.UnloadScene(scene));
+            }
+            await UniTask.WhenAll(sceneToUnloadsTask);
+        }
+
+        /// <summary>
+        /// Unload all sceneToUnload from build settings
         /// </summary>
         public void UnloadAll()
         {
@@ -82,6 +106,13 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             {
                 SceneManager.UnloadSceneAsync(i);
             }
+        }
+
+        private async UniTask LoadWithoutLoadingScreen(List<string> scenes, LoadSceneMode sceneMode)
+        {
+            SceneLoader sceneLoader = new SceneLoader(scenes, sceneMode);
+            sceneLoader.OnSceneLoadingComplete.AddListener(sceneLoader.ActivateScenes);
+            await sceneLoader.LoadSceneAsync();
         }
 
         private async UniTask LoadScenes(List<string> scenes,LoadSceneMode sceneMode)
