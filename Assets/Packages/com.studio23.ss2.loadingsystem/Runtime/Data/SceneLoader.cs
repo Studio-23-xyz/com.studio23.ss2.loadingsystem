@@ -52,7 +52,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 
             OnSceneProgress?.Invoke(1.0f);
 
-            await UniTask.WaitForFixedUpdate();
+            await UniTask.NextFrame();
 
             OnSceneLoadingComplete?.Invoke();
         }

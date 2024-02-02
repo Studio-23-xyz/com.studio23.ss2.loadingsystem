@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.0.5] - 2024-02-02
+
+### Patch
+
+- Removed time scale dependency
+
+
 ## [v1.0.4] - 2024-01-25
 
 ### Added
