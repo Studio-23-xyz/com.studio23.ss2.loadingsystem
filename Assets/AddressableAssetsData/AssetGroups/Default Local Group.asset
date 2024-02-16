@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c3f3efcce7c6d9441bdfa02d525c1401
+  m_SerializeEntries:
+  - m_GUID: 99b97a3bed7c22248b76d7168cc909ea
+    m_Address: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/LoadingScene
+      1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9327610329241314fb7f5d150eb6fbba
+    m_Address: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/FakeScene
+      2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccdca9d6a23d06a4abf1962d55b5be20
+    m_Address: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/FakeScene
+      3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 97cb9f47d708e444d83f9d0acf299282, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e79dfd32e46c6cb4582ef0b8ce9d3a5b, type: 2}
+    - {fileID: 11400000, guid: ab46b31f9ae64464b958fbf3d0466823, type: 2}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Studio23.SS2.SceneLoadingSystem.Core;
 using Studio23.SS2.SceneLoadingSystem.Data;
 using Studio23.SS2.SceneLoadingSystem.Extension;
 using TMPro;
@@ -52,7 +53,6 @@ namespace Studio23.SS2.SceneLoadingSystem.UI
             ShowHint();
             CrossFadeBackGroundImages();
         }
-
 
 
         public void OnLoadingDone()

@@ -261,7 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af3be638c2699348a04d679cf62359c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadingScreenPrefab: {fileID: 8596143583750184982, guid: 75889ba7384908242a6afab36d168251, type: 3}
 --- !u!1 &1336873885
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +346,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1767917795}
         m_TargetAssemblyTypeName: ExampleLoadScene, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadUnloadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -862,6 +861,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ed877097e0caf448fbf67d69fd8eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneToLoad:
+  - SceneData: {fileID: 11400000, guid: 8a2c9df386718f7418a520c0c2d3f67d, type: 2}
+    IsLoadAsSingle: 1
+    ActivateOnLoad: 0
+  SetActiveAddressableScene: {fileID: 11400000, guid: 8a2c9df386718f7418a520c0c2d3f67d, type: 2}
+  SceneToUnload: []
+  LoadingPrefab: {fileID: 8596143583750184982, guid: 0946037541f367f4b92c5ffa6ca2a1ea, type: 3}
 --- !u!1 &1903427292
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +878,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1903427295}
   - component: {fileID: 1903427294}
-  - component: {fileID: 1903427293}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -880,14 +885,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1903427293
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903427292}
-  m_Enabled: 1
 --- !u!20 &1903427294
 Camera:
   m_ObjectHideFlags: 0

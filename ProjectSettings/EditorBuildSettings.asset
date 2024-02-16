@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/LoadingScene
       1.unity
     guid: 9ffb0a7772f13a8428ca08058dc6a8a7
@@ -21,12 +21,13 @@ EditorBuildSettings:
     path: Assets/Packages/com.studio23.ss2.loadingsystem/Tests/PlayMode/TestSample/Example/Scene
       3.unity
     guid: d71873e2c5870394cae4352ac5c935aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/FakeScene
       2.unity
     guid: c9edd72fb6f130f4e8074eb4bfb4dac7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Packages/com.studio23.ss2.loadingsystem/Samples/Example/FakeScene
       3.unity
     guid: e83f34f3653d266499302785b292f96e
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: c23c7e64527660b44b6a8c6ae150308d, type: 2}
