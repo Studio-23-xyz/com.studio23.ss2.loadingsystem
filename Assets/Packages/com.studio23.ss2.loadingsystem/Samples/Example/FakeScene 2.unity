@@ -693,13 +693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ed877097e0caf448fbf67d69fd8eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad:
-  - SceneData: {fileID: 11400000, guid: cec38b12daa570a458d939560d374498, type: 2}
-    IsLoadAsSingle: 0
-    ActivateOnLoad: 0
-  SetActiveAddressableScene: {fileID: 11400000, guid: cec38b12daa570a458d939560d374498, type: 2}
-  SceneToUnload: []
-  LoadingPrefab: {fileID: 8714713570276884955, guid: dd7952d232b33fa4cb76e02835f6b94a, type: 3}
+  SceneToLoad: {fileID: 11400000, guid: c77e966353b627a4089d0a9bec4034bd, type: 2}
+  SetActiveAddressableScene: {fileID: 11400000, guid: 2723ecb384bc32f43b37b2e3ea2f4380, type: 2}
+  SceneToUnload: {fileID: 0}
 --- !u!4 &1051577410
 Transform:
   m_ObjectHideFlags: 0

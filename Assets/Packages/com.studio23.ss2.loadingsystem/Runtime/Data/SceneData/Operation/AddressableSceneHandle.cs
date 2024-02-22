@@ -1,16 +1,14 @@
 
 using Cysharp.Threading.Tasks;
-using Studio23.SS2.SceneLoadingSystem.Data;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
-namespace Studio23.SS2.SceneLoadingSystem.Core
+namespace Studio23.SS2.SceneLoadingSystem.Data
 {
     public class AddressableSceneHandle
     {
-
         public AsyncOperationHandle<SceneInstance> LoadHandle { get; }
 
         public AddressableSceneHandle(AddressableSceneData data, bool isSingleLoad, bool activateOnLoad)
@@ -22,7 +20,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         { 
             await Addressables.UnloadSceneAsync(LoadHandle);
         }
-
     }
 }
 

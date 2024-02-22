@@ -1,15 +1,10 @@
-using System;
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
-using Studio23.SS2.SceneLoadingSystem.Core;
-using UnityEngine;
-using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
-using System.ComponentModel;
 
 namespace Studio23.SS2.SceneLoadingSystem.Data
 {
@@ -19,9 +14,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         private readonly List<SceneLoadingData> _scenesToLoad;
         private List<AsyncOperationHandle<SceneInstance>> _loadHandles;
 
-        internal  UnityEvent<float> OnSceneProgress;
-        internal  UnityEvent OnSceneLoadingComplete;
-        internal  UnityEvent OnSceneActivationComplete;
+        internal UnityEvent<float> OnSceneProgress;
+        internal UnityEvent OnSceneLoadingComplete;
+        internal UnityEvent OnSceneActivationComplete;
 
 
         internal SceneLoader(List<SceneLoadingData> scenesToLoad,LoadSceneMode sceneLoadingMode = LoadSceneMode.Additive, bool activateOnLoad = false)
@@ -47,7 +42,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
                 OnSceneProgress?.Invoke(averageProgress);
                 await UniTask.Yield();
             }
-
             OnSceneProgress?.Invoke(1.0f);
             OnSceneLoadingComplete?.Invoke();
             await UniTask.WaitUntil(() => _loadHandles.TrueForAll(r => r.Result.Scene.isLoaded));
@@ -59,7 +53,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
             {
                 await operation.Result.ActivateAsync();
             }
-
             foreach (var operation in _loadHandles)
             {
                 while (!operation.IsDone)

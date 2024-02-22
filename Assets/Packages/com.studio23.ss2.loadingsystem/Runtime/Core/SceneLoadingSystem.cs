@@ -3,8 +3,8 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using Studio23.SS2.SceneLoadingSystem.Data;
 using Studio23.SS2.SceneLoadingSystem.UI;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
@@ -42,6 +42,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         }
 
 
+
+
+        /// <summary>
+        /// Make scenes without loading screen
+        /// </summary>
         public async UniTask LoadScenesWithoutLoadingScreen(List<SceneLoadingData> scenes, LoadSceneMode sceneMode = LoadSceneMode.Additive, bool activateOnload = false)
         {
             SceneLoader sceneLoader = new SceneLoader(scenes, sceneMode, activateOnload);
@@ -49,6 +54,10 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
             await sceneLoader.LoadSceneAsync();
         }
 
+
+        /// <summary>
+        /// Make scenes with loading screen
+        /// </summary>
         public async UniTask LoadScenes(List<SceneLoadingData> scenes, GameObject loadingScreenPrefab = null)
         {
             AbstractLoadingScreenUI loadingScreen= Instantiate(loadingScreenPrefab).GetComponent<AbstractLoadingScreenUI>();
@@ -64,10 +73,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         /// <summary>
         /// Make a single scene active
         /// </summary>
-        public async UniTask SetActiveScene(Scene activeScene)
+        public async UniTask SetActiveScene(AsyncOperationHandle<SceneInstance> activeScene)
         {
-            await UniTask.WaitUntil(() => activeScene.isLoaded);
-            SceneManager.SetActiveScene(activeScene);
+            var scene = activeScene.Result.Scene;
+            await UniTask.WaitUntil(() => scene.isLoaded);
+            SceneManager.SetActiveScene(scene);
         }
 
         /// <summary>
@@ -77,27 +87,24 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         /// <returns></returns>
         public async UniTask UnloadScenes(List<AddressableSceneData> scenesToUnload)
         {
-            
             foreach (var scene in scenesToUnload)
             {
                 await _scenesLoaded[scene].UnloadScene();
             }
         }
 
+        /// <summary>
+        /// Return addressable handle data
+        /// </summary>
+        /// <param name="addressableScene"></param>
+        /// <returns></returns>
 
-        public async void LoadUnloadScene(List<SceneLoadingData> SceneToLoad, AddressableSceneData SetActiveAddressableScene, List<AddressableSceneData> SceneToUnload)
+        public AsyncOperationHandle<SceneInstance> GetHandleData(AddressableSceneData addressableScene)
         {
-            if (SceneToLoad.Count > 0)
-            {
-                await LoadScenesWithoutLoadingScreen(SceneToLoad);
-            }
-
-            await SetActiveScene(_scenesLoaded[SetActiveAddressableScene].LoadHandle.Result.Scene);
-
-            if (SceneToUnload.Count > 0)
-            {
-                await UnloadScenes(SceneToUnload);
-            }
+            AsyncOperationHandle<SceneInstance> sceneHandleData = new AsyncOperationHandle<SceneInstance>();
+            if (_scenesLoaded.TryGetValue(addressableScene, out var foundLoadedScene))
+                sceneHandleData =  foundLoadedScene.LoadHandle;
+            return sceneHandleData;
         }
     }
 }
