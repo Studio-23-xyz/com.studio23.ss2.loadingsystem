@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.0.5] - 2024-02-23
+
+### Added
+
+- Made scene loading to work with addressable scene only
+- Removed test folder
+
 ## [v1.0.4] - 2024-01-25
 
 ### Added

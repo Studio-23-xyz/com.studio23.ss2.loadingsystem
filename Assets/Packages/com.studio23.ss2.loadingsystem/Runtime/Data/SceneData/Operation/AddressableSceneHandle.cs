@@ -9,14 +9,14 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 {
     public class AddressableSceneHandle
     {
-        public AsyncOperationHandle<SceneInstance> LoadHandle { get; }
+        internal AsyncOperationHandle<SceneInstance> LoadHandle { get; }
 
-        public AddressableSceneHandle(AddressableSceneData data, bool isSingleLoad, bool activateOnLoad)
+        internal AddressableSceneHandle(AddressableSceneData data, bool isSingleLoad, bool activateOnLoad)
         {
             LoadHandle = Addressables.LoadSceneAsync(data.Scene, isSingleLoad? LoadSceneMode.Single : LoadSceneMode.Additive, activateOnLoad);
         }
 
-        public async UniTask UnloadScene()
+        internal async UniTask UnloadScene()
         { 
             await Addressables.UnloadSceneAsync(LoadHandle);
         }
