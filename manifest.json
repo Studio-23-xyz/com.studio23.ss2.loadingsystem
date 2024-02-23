@@ -55,10 +55,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.SceneLoadingSystemTests.yml",
+      "source_relative_path": "api/Global.SceneLoadingData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Global.SceneLoadingSystemTests.html"
+          "relative_path": "api/Global.SceneLoadingData.html"
         }
       },
       "version": ""
@@ -95,20 +95,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.yml",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html"
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.yml",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html"
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html"
         }
       },
       "version": ""
@@ -125,10 +135,40 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.yml",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html"
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html"
         }
       },
       "version": ""
@@ -169,16 +209,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Data.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html"
         }
       },
       "version": ""

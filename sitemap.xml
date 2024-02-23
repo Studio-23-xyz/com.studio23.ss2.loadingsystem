@@ -2,169 +2,187 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Global.CircularProgressUiController.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Global.ExampleLoadScene.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Global.HorizontalProgressUIController.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Global.LoopingProgressUiController.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Global.SceneLoadingSystemTests.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Global.SceneLoadingData.html</loc>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Global.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Core.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html</loc>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle.html</loc>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html</loc>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.html</loc>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html</loc>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html</loc>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.TextStyleSettings.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.TextType.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Data.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Editor.TextStyleSettingsEditor.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Editor.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Extension.ShuffleListExtension.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.Extension.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.UI.AbstractLoadingScreenUI.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/Studio23.SS2.SceneLoadingSystem.UI.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/api/index.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/changelog/CHANGELOG.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/index.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/license/LICENSE.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://studio-23-xyz.github.io/com.studio23.ss2.loadingsystem/manual/index.html</loc>
-    <lastmod>2024-02-02T08:04:21+00:00</lastmod>
+    <lastmod>2024-02-23T10:08:41+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -7,7 +7,7 @@
   "api/Global.ExampleLoadScene.html": {
     "href": "api/Global.ExampleLoadScene.html",
     "title": "Class ExampleLoadScene | |",
-    "keywords": "Class ExampleLoadScene Namespace Global public class ExampleLoadScene : MonoBehaviour Inheritance object ExampleLoadScene Methods LoadScene() public void LoadScene()"
+    "keywords": "Class ExampleLoadScene Namespace Global public class ExampleLoadScene : MonoBehaviour Inheritance object ExampleLoadScene Fields SceneToLoad public SceneOperationAction SceneToLoad Field Value SceneOperationAction SceneToUnload public SceneOperationAction SceneToUnload Field Value SceneOperationAction SetActiveAddressableScene public SceneOperationAction SetActiveAddressableScene Field Value SceneOperationAction Methods LoadUnloadScene() public void LoadUnloadScene()"
   },
   "api/Global.HorizontalProgressUIController.html": {
     "href": "api/Global.HorizontalProgressUIController.html",
@@ -19,45 +19,65 @@
     "title": "Class LoopingProgressUiController | |",
     "keywords": "Class LoopingProgressUiController Namespace Global public class LoopingProgressUiController : AbstractLoadingScreenUI Inheritance object AbstractLoadingScreenUI LoopingProgressUiController Inherited Members AbstractLoadingScreenUI._backgroundImages AbstractLoadingScreenUI._backgroundImageSlot AbstractLoadingScreenUI._hintHeaderText AbstractLoadingScreenUI._hintDescriptionText AbstractLoadingScreenUI._backgroundFadeDuration AbstractLoadingScreenUI.OnValidAnyKeyPressEvent AbstractLoadingScreenUI.OnLoadingDone() AbstractLoadingScreenUI.CheckIfKeyPressRequired() AbstractLoadingScreenUI.OnAnyKeyPress() AbstractLoadingScreenUI.RemoveLoadingScreen() AbstractLoadingScreenUI.ShowHint() AbstractLoadingScreenUI.TextStyling(BaseTextStyleData, TextMeshProUGUI) AbstractLoadingScreenUI.CrossFadeBackGroundImages() Methods Initialize() public override void Initialize() UpdateProgress(float) public override void UpdateProgress(float progress) Parameters progress float"
   },
-  "api/Global.SceneLoadingSystemTests.html": {
-    "href": "api/Global.SceneLoadingSystemTests.html",
-    "title": "Class SceneLoadingSystemTests | |",
-    "keywords": "Class SceneLoadingSystemTests Namespace Global public class SceneLoadingSystemTests Inheritance object SceneLoadingSystemTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ClearTestData() public void ClearTestData() LoadMultipleScenes() public IEnumerator LoadMultipleScenes() Returns IEnumerator LoadSingleScene() public IEnumerator LoadSingleScene() Returns IEnumerator LoadSingleSceneWithInput() public IEnumerator LoadSingleSceneWithInput() Returns IEnumerator UnloadScene() public IEnumerator UnloadScene() Returns IEnumerator UnloadScene_2() public IEnumerator UnloadScene_2() Returns IEnumerator"
+  "api/Global.SceneLoadingData.html": {
+    "href": "api/Global.SceneLoadingData.html",
+    "title": "Class SceneLoadingData | |",
+    "keywords": "Class SceneLoadingData Namespace Global [Serializable] public class SceneLoadingData Inheritance object SceneLoadingData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields ActivateOnLoad public bool ActivateOnLoad Field Value bool IsLoadAsSingle public bool IsLoadAsSingle Field Value bool SceneData public AddressableSceneData SceneData Field Value AddressableSceneData"
   },
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | |",
-    "keywords": "Namespace Classes CircularProgressUiController ExampleLoadScene HorizontalProgressUIController LoopingProgressUiController SceneLoadingSystemTests"
+    "keywords": "Namespace Classes CircularProgressUiController ExampleLoadScene HorizontalProgressUIController LoopingProgressUiController SceneLoadingData"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html",
     "title": "Class SceneLoadingSystem | |",
-    "keywords": "Class SceneLoadingSystem Namespace Studio23.SS2.SceneLoadingSystem.Core public class SceneLoadingSystem : MonoBehaviour Inheritance object SceneLoadingSystem Fields Instance public static SceneLoadingSystem Instance Field Value SceneLoadingSystem Methods LoadScene(string) Load a single sceneToUnload by sceneToUnload name public UniTask LoadScene(string scene) Parameters scene string Returns UniTask LoadSceneWithoutLoadingScreen(string, LoadSceneMode) Load a single sceneToUnload by sceneToUnload name without loading screen public UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = null) Parameters scene string sceneMode LoadSceneMode Returns UniTask LoadScenes(List<string>) Load multiple scenes by a list of sceneToUnload name public UniTask LoadScenes(List<string> scenes) Parameters scenes List<string> Returns UniTask LoadScenesWithoutLoadingScreen(List<string>, LoadSceneMode) Load multiple scenes by sceneToUnload name without loading screen public UniTask LoadScenesWithoutLoadingScreen(List<string> scene, LoadSceneMode sceneMode = null) Parameters scene List<string> sceneMode LoadSceneMode Returns UniTask SetActiveScene(string) Make a single scene active public UniTask SetActiveScene(string activeScene) Parameters activeScene string Returns UniTask UnloadAll() Unload all sceneToUnload from build settings public void UnloadAll() UnloadScene(string) Unload a sceneToUnload by sceneToUnload name public UniTask UnloadScene(string scene) Parameters scene string Returns UniTask UnloadScenes(List<string>) Unload multiple by sceneToUnload name public UniTask UnloadScenes(List<string> sceneToUnload) Parameters sceneToUnload List<string> Returns UniTask"
+    "keywords": "Class SceneLoadingSystem Namespace Studio23.SS2.SceneLoadingSystem.Core public class SceneLoadingSystem : MonoBehaviour Inheritance object SceneLoadingSystem Fields Instance public static SceneLoadingSystem Instance Field Value SceneLoadingSystem Methods GetHandleData(AddressableSceneData) Return addressable handle data public AsyncOperationHandle<SceneInstance> GetHandleData(AddressableSceneData addressableScene) Parameters addressableScene AddressableSceneData Returns AsyncOperationHandle<SceneInstance> LoadScenes(List<SceneLoadingData>, GameObject) Make scenes with loading screen public UniTask LoadScenes(List<SceneLoadingData> scenes, GameObject loadingScreenPrefab = null) Parameters scenes List<SceneLoadingData> loadingScreenPrefab GameObject Returns UniTask LoadScenesWithoutLoadingScreen(List<SceneLoadingData>, LoadSceneMode, bool) Make scenes without loading screen public UniTask LoadScenesWithoutLoadingScreen(List<SceneLoadingData> scenes, LoadSceneMode sceneMode = null, bool activateOnload = false) Parameters scenes List<SceneLoadingData> sceneMode LoadSceneMode activateOnload bool Returns UniTask PopulateSceneLoadData(AddressableSceneData, AddressableSceneHandle) public void PopulateSceneLoadData(AddressableSceneData addressableSceneData, AddressableSceneHandle addressableSceneHandle) Parameters addressableSceneData AddressableSceneData addressableSceneHandle AddressableSceneHandle SetActiveScene(AsyncOperationHandle<SceneInstance>) Make a single scene active public UniTask SetActiveScene(AsyncOperationHandle<SceneInstance> activeScene) Parameters activeScene AsyncOperationHandle<SceneInstance> Returns UniTask UnloadScenes(List<AddressableSceneData>) Unload multiple by sceneToUnload name public UniTask UnloadScenes(List<AddressableSceneData> scenesToUnload) Parameters scenesToUnload List<AddressableSceneData> Returns UniTask"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Core.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Core.html",
     "title": "Namespace Studio23.SS2.SceneLoadingSystem.Core | |",
     "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Core Classes SceneLoadingSystem"
   },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html",
+    "title": "Class AddressableSceneData | |",
+    "keywords": "Class AddressableSceneData Namespace Studio23.SS2.SceneLoadingSystem.Data public class AddressableSceneData : ScriptableObject Inheritance object AddressableSceneData Fields Scene public AssetReference Scene Field Value AssetReference"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle.html",
+    "title": "Class AddressableSceneHandle | |",
+    "keywords": "Class AddressableSceneHandle Namespace Studio23.SS2.SceneLoadingSystem.Data public class AddressableSceneHandle Inheritance object AddressableSceneHandle Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString()"
+  },
   "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html",
     "title": "Class BaseTextStyleData | |",
     "keywords": "Class BaseTextStyleData Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class BaseTextStyleData Inheritance object BaseTextStyleData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields FontAsset public TMP_FontAsset FontAsset Field Value TMP_FontAsset FontStyle public FontStyles FontStyle Field Value FontStyles"
-  },
-  "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html": {
-    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html",
-    "title": "Class FakeSceneTable | |",
-    "keywords": "Class FakeSceneTable Namespace Studio23.SS2.SceneLoadingSystem.Data public static class FakeSceneTable Inheritance object FakeSceneTable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields FakeScene2 public static readonly string FakeScene2 Field Value string FakeScene3 public static readonly string FakeScene3 Field Value string LoadingScene1 public static readonly string LoadingScene1 Field Value string"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html",
     "title": "Class LoadingScreenTextTable | |",
     "keywords": "Class LoadingScreenTextTable Namespace Studio23.SS2.SceneLoadingSystem.Data [Serializable] public class LoadingScreenTextTable : ScriptableObject Inheritance object LoadingScreenTextTable Fields HintsInfo public List<TextData> HintsInfo Field Value List<TextData> Methods GetHint() public TextData GetHint() Returns TextData GetHint(TextType) public TextData GetHint(TextType type) Parameters type TextType Returns TextData"
   },
-  "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html": {
-    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html",
-    "title": "Class SceneTable | |",
-    "keywords": "Class SceneTable Namespace Studio23.SS2.SceneLoadingSystem.Data public static class SceneTable Inheritance object SceneTable Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields DummyScene1 public static readonly string DummyScene1 Field Value string DummyScene2 public static readonly string DummyScene2 Field Value string ScriptScene public static readonly string ScriptScene Field Value string"
+  "api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html",
+    "title": "Class SceneLoadingOperation | |",
+    "keywords": "Class SceneLoadingOperation Namespace Studio23.SS2.SceneLoadingSystem.Data public class SceneLoadingOperation : SceneOperationAction Inheritance object SceneOperationAction SceneLoadingOperation Fields PrefabGameObject public GameObject PrefabGameObject Field Value GameObject SceneData public List<SceneLoadingData> SceneData Field Value List<SceneLoadingData> Methods DoSceneOperation() public override UniTask DoSceneOperation() Returns UniTask"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.html",
+    "title": "Class SceneOperationAction | |",
+    "keywords": "Class SceneOperationAction Namespace Studio23.SS2.SceneLoadingSystem.Data public class SceneOperationAction : ScriptableObject Inheritance object SceneOperationAction Derived SceneLoadingOperation SceneSetOperation SceneUnloadingOperation Methods DoSceneOperation() public virtual UniTask DoSceneOperation() Returns UniTask"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html",
+    "title": "Class SceneSetOperation | |",
+    "keywords": "Class SceneSetOperation Namespace Studio23.SS2.SceneLoadingSystem.Data public class SceneSetOperation : SceneOperationAction Inheritance object SceneOperationAction SceneSetOperation Fields SetActiveAddressableScene public AddressableSceneData SetActiveAddressableScene Field Value AddressableSceneData Methods DoSceneOperation() public override UniTask DoSceneOperation() Returns UniTask"
+  },
+  "api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html": {
+    "href": "api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html",
+    "title": "Class SceneUnloadingOperation | |",
+    "keywords": "Class SceneUnloadingOperation Namespace Studio23.SS2.SceneLoadingSystem.Data public class SceneUnloadingOperation : SceneOperationAction Inheritance object SceneOperationAction SceneUnloadingOperation Fields ScenesToUnload public List<AddressableSceneData> ScenesToUnload Field Value List<AddressableSceneData> Methods DoSceneOperation() public override UniTask DoSceneOperation() Returns UniTask"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html",
@@ -77,12 +97,7 @@
   "api/Studio23.SS2.SceneLoadingSystem.Data.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Data.html",
     "title": "Namespace Studio23.SS2.SceneLoadingSystem.Data | |",
-    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Data Classes BaseTextStyleData FakeSceneTable LoadingScreenTextTable SceneTable TextData TextStyleSettings Enums TextType"
-  },
-  "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html": {
-    "href": "api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html",
-    "title": "Class SceneListEditor | |",
-    "keywords": "Class SceneListEditor Namespace Studio23.SS2.SceneLoadingSystem.Editor public class SceneListEditor : EditorWindow Inheritance object SceneListEditor Methods GetAllScenesInBuild() public static void GetAllScenesInBuild()"
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Data Classes AddressableSceneData AddressableSceneHandle BaseTextStyleData LoadingScreenTextTable SceneLoadingOperation SceneOperationAction SceneSetOperation SceneUnloadingOperation TextData TextStyleSettings Enums TextType"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Editor.TextStyleSettingsEditor.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Editor.TextStyleSettingsEditor.html",
@@ -92,7 +107,7 @@
   "api/Studio23.SS2.SceneLoadingSystem.Editor.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Editor.html",
     "title": "Namespace Studio23.SS2.SceneLoadingSystem.Editor | |",
-    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Editor Classes SceneListEditor TextStyleSettingsEditor"
+    "keywords": "Namespace Studio23.SS2.SceneLoadingSystem.Editor Classes TextStyleSettingsEditor"
   },
   "api/Studio23.SS2.SceneLoadingSystem.Extension.ShuffleListExtension.html": {
     "href": "api/Studio23.SS2.SceneLoadingSystem.Extension.ShuffleListExtension.html",
@@ -122,7 +137,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v1.0.5] - 2024-02-02 Patch Removed time scale dependency [v1.0.4] - 2024-01-25 Added Added separate function to make scene active Added more separate function to handle single and multiple scene loading and unloading Patch Removed scene active parameter from loading scene functionality [v1.0.3] - 2024-01-16 Added Added function to make any scene active [v1.0.2] - 2024-01-16 Added Fixed Editor Script bugs [v1.0.1] - 2023-12-29 Added Added new event to handle loading screen Added loading scene mode to single loading screen method Fixed UI bugs [v1.0.0] - 2023-11-27 Added First package publish. Added different type of loading screen prefab Added SceneLoadingSystem script Added sample scene Removed unnecessary codes Updated package.json urls Updated Test Folder"
+    "keywords": "Changelog [v1.0.6] - 2024-02-23 Added Made scene loading to work with addressable scene only Removed test folder [v1.0.4] - 2024-01-25 Added Added separate function to make scene active Added more separate function to handle single and multiple scene loading and unloading Patch Removed scene active parameter from loading scene functionality [v1.0.3] - 2024-01-16 Added Added function to make any scene active [v1.0.2] - 2024-01-16 Added Fixed Editor Script bugs [v1.0.1] - 2023-12-29 Added Added new event to handle loading screen Added loading scene mode to single loading screen method Fixed UI bugs [v1.0.0] - 2023-11-27 Added First package publish. Added different type of loading screen prefab Added SceneLoadingSystem script Added sample scene Removed unnecessary codes Updated package.json urls Updated Test Folder"
   },
   "index.html": {
     "href": "index.html",

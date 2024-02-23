@@ -32,19 +32,37 @@ references:
   commentId: T:Global.ExampleLoadScene
   fullName: ExampleLoadScene
   nameWithType: ExampleLoadScene
-- uid: Global.ExampleLoadScene.LoadScene
-  name: LoadScene()
-  href: api/Global.ExampleLoadScene.html#Global_ExampleLoadScene_LoadScene
-  commentId: M:Global.ExampleLoadScene.LoadScene
-  fullName: ExampleLoadScene.LoadScene()
-  nameWithType: ExampleLoadScene.LoadScene()
-- uid: Global.ExampleLoadScene.LoadScene*
-  name: LoadScene
-  href: api/Global.ExampleLoadScene.html#Global_ExampleLoadScene_LoadScene_
-  commentId: Overload:Global.ExampleLoadScene.LoadScene
+- uid: Global.ExampleLoadScene.LoadUnloadScene
+  name: LoadUnloadScene()
+  href: api/Global.ExampleLoadScene.html#Global_ExampleLoadScene_LoadUnloadScene
+  commentId: M:Global.ExampleLoadScene.LoadUnloadScene
+  fullName: ExampleLoadScene.LoadUnloadScene()
+  nameWithType: ExampleLoadScene.LoadUnloadScene()
+- uid: Global.ExampleLoadScene.LoadUnloadScene*
+  name: LoadUnloadScene
+  href: api/Global.ExampleLoadScene.html#Global_ExampleLoadScene_LoadUnloadScene_
+  commentId: Overload:Global.ExampleLoadScene.LoadUnloadScene
   isSpec: "True"
-  fullName: ExampleLoadScene.LoadScene
-  nameWithType: ExampleLoadScene.LoadScene
+  fullName: ExampleLoadScene.LoadUnloadScene
+  nameWithType: ExampleLoadScene.LoadUnloadScene
+- uid: Global.ExampleLoadScene.SceneToLoad
+  name: SceneToLoad
+  href: api/Global.ExampleLoadScene.html#Global_ExampleLoadScene_SceneToLoad
+  commentId: F:Global.ExampleLoadScene.SceneToLoad
+  fullName: ExampleLoadScene.SceneToLoad
+  nameWithType: ExampleLoadScene.SceneToLoad
+- uid: Global.ExampleLoadScene.SceneToUnload
+  name: SceneToUnload
+  href: api/Global.ExampleLoadScene.html#Global_ExampleLoadScene_SceneToUnload
+  commentId: F:Global.ExampleLoadScene.SceneToUnload
+  fullName: ExampleLoadScene.SceneToUnload
+  nameWithType: ExampleLoadScene.SceneToUnload
+- uid: Global.ExampleLoadScene.SetActiveAddressableScene
+  name: SetActiveAddressableScene
+  href: api/Global.ExampleLoadScene.html#Global_ExampleLoadScene_SetActiveAddressableScene
+  commentId: F:Global.ExampleLoadScene.SetActiveAddressableScene
+  fullName: ExampleLoadScene.SetActiveAddressableScene
+  nameWithType: ExampleLoadScene.SetActiveAddressableScene
 - uid: Global.HorizontalProgressUIController
   name: HorizontalProgressUIController
   href: api/Global.HorizontalProgressUIController.html
@@ -102,90 +120,30 @@ references:
   isSpec: "True"
   fullName: LoopingProgressUiController.UpdateProgress
   nameWithType: LoopingProgressUiController.UpdateProgress
-- uid: Global.SceneLoadingSystemTests
-  name: SceneLoadingSystemTests
-  href: api/Global.SceneLoadingSystemTests.html
-  commentId: T:Global.SceneLoadingSystemTests
-  fullName: SceneLoadingSystemTests
-  nameWithType: SceneLoadingSystemTests
-- uid: Global.SceneLoadingSystemTests.ClearTestData
-  name: ClearTestData()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_ClearTestData
-  commentId: M:Global.SceneLoadingSystemTests.ClearTestData
-  fullName: SceneLoadingSystemTests.ClearTestData()
-  nameWithType: SceneLoadingSystemTests.ClearTestData()
-- uid: Global.SceneLoadingSystemTests.ClearTestData*
-  name: ClearTestData
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_ClearTestData_
-  commentId: Overload:Global.SceneLoadingSystemTests.ClearTestData
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.ClearTestData
-  nameWithType: SceneLoadingSystemTests.ClearTestData
-- uid: Global.SceneLoadingSystemTests.LoadMultipleScenes
-  name: LoadMultipleScenes()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadMultipleScenes
-  commentId: M:Global.SceneLoadingSystemTests.LoadMultipleScenes
-  fullName: SceneLoadingSystemTests.LoadMultipleScenes()
-  nameWithType: SceneLoadingSystemTests.LoadMultipleScenes()
-- uid: Global.SceneLoadingSystemTests.LoadMultipleScenes*
-  name: LoadMultipleScenes
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadMultipleScenes_
-  commentId: Overload:Global.SceneLoadingSystemTests.LoadMultipleScenes
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.LoadMultipleScenes
-  nameWithType: SceneLoadingSystemTests.LoadMultipleScenes
-- uid: Global.SceneLoadingSystemTests.LoadSingleScene
-  name: LoadSingleScene()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadSingleScene
-  commentId: M:Global.SceneLoadingSystemTests.LoadSingleScene
-  fullName: SceneLoadingSystemTests.LoadSingleScene()
-  nameWithType: SceneLoadingSystemTests.LoadSingleScene()
-- uid: Global.SceneLoadingSystemTests.LoadSingleScene*
-  name: LoadSingleScene
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadSingleScene_
-  commentId: Overload:Global.SceneLoadingSystemTests.LoadSingleScene
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.LoadSingleScene
-  nameWithType: SceneLoadingSystemTests.LoadSingleScene
-- uid: Global.SceneLoadingSystemTests.LoadSingleSceneWithInput
-  name: LoadSingleSceneWithInput()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadSingleSceneWithInput
-  commentId: M:Global.SceneLoadingSystemTests.LoadSingleSceneWithInput
-  fullName: SceneLoadingSystemTests.LoadSingleSceneWithInput()
-  nameWithType: SceneLoadingSystemTests.LoadSingleSceneWithInput()
-- uid: Global.SceneLoadingSystemTests.LoadSingleSceneWithInput*
-  name: LoadSingleSceneWithInput
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_LoadSingleSceneWithInput_
-  commentId: Overload:Global.SceneLoadingSystemTests.LoadSingleSceneWithInput
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.LoadSingleSceneWithInput
-  nameWithType: SceneLoadingSystemTests.LoadSingleSceneWithInput
-- uid: Global.SceneLoadingSystemTests.UnloadScene
-  name: UnloadScene()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_UnloadScene
-  commentId: M:Global.SceneLoadingSystemTests.UnloadScene
-  fullName: SceneLoadingSystemTests.UnloadScene()
-  nameWithType: SceneLoadingSystemTests.UnloadScene()
-- uid: Global.SceneLoadingSystemTests.UnloadScene*
-  name: UnloadScene
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_UnloadScene_
-  commentId: Overload:Global.SceneLoadingSystemTests.UnloadScene
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.UnloadScene
-  nameWithType: SceneLoadingSystemTests.UnloadScene
-- uid: Global.SceneLoadingSystemTests.UnloadScene_2
-  name: UnloadScene_2()
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_UnloadScene_2
-  commentId: M:Global.SceneLoadingSystemTests.UnloadScene_2
-  fullName: SceneLoadingSystemTests.UnloadScene_2()
-  nameWithType: SceneLoadingSystemTests.UnloadScene_2()
-- uid: Global.SceneLoadingSystemTests.UnloadScene_2*
-  name: UnloadScene_2
-  href: api/Global.SceneLoadingSystemTests.html#Global_SceneLoadingSystemTests_UnloadScene_2_
-  commentId: Overload:Global.SceneLoadingSystemTests.UnloadScene_2
-  isSpec: "True"
-  fullName: SceneLoadingSystemTests.UnloadScene_2
-  nameWithType: SceneLoadingSystemTests.UnloadScene_2
+- uid: Global.SceneLoadingData
+  name: SceneLoadingData
+  href: api/Global.SceneLoadingData.html
+  commentId: T:Global.SceneLoadingData
+  fullName: SceneLoadingData
+  nameWithType: SceneLoadingData
+- uid: Global.SceneLoadingData.ActivateOnLoad
+  name: ActivateOnLoad
+  href: api/Global.SceneLoadingData.html#Global_SceneLoadingData_ActivateOnLoad
+  commentId: F:Global.SceneLoadingData.ActivateOnLoad
+  fullName: SceneLoadingData.ActivateOnLoad
+  nameWithType: SceneLoadingData.ActivateOnLoad
+- uid: Global.SceneLoadingData.IsLoadAsSingle
+  name: IsLoadAsSingle
+  href: api/Global.SceneLoadingData.html#Global_SceneLoadingData_IsLoadAsSingle
+  commentId: F:Global.SceneLoadingData.IsLoadAsSingle
+  fullName: SceneLoadingData.IsLoadAsSingle
+  nameWithType: SceneLoadingData.IsLoadAsSingle
+- uid: Global.SceneLoadingData.SceneData
+  name: SceneData
+  href: api/Global.SceneLoadingData.html#Global_SceneLoadingData_SceneData
+  commentId: F:Global.SceneLoadingData.SceneData
+  fullName: SceneLoadingData.SceneData
+  nameWithType: SceneLoadingData.SceneData
 - uid: Studio23.SS2.SceneLoadingSystem.Core
   name: Studio23.SS2.SceneLoadingSystem.Core
   href: api/Studio23.SS2.SceneLoadingSystem.Core.html
@@ -198,53 +156,34 @@ references:
   commentId: T:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem
   fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem
   nameWithType: SceneLoadingSystem
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)
+  name: GetHandleData(AddressableSceneData)
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_GetHandleData_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)
+  nameWithType: SceneLoadingSystem.GetHandleData(AddressableSceneData)
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData*
+  name: GetHandleData
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_GetHandleData_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData
+  nameWithType: SceneLoadingSystem.GetHandleData
 - uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.Instance
   name: Instance
   href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_Instance
   commentId: F:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.Instance
   fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.Instance
   nameWithType: SceneLoadingSystem.Instance
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene(System.String)
-  name: LoadScene(string)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScene_System_String_
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene(System.String)
-  name.vb: LoadScene(String)
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene(string)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene(String)
-  nameWithType: SceneLoadingSystem.LoadScene(string)
-  nameWithType.vb: SceneLoadingSystem.LoadScene(String)
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene*
-  name: LoadScene
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScene_
-  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene
-  isSpec: "True"
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene
-  nameWithType: SceneLoadingSystem.LoadScene
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String,LoadSceneMode)
-  name: LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_System_String_LoadSceneMode_
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String,LoadSceneMode)
-  name.vb: LoadSceneWithoutLoadingScreen(String, LoadSceneMode)
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(String, LoadSceneMode)
-  nameWithType: SceneLoadingSystem.LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
-  nameWithType.vb: SceneLoadingSystem.LoadSceneWithoutLoadingScreen(String, LoadSceneMode)
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen*
-  name: LoadSceneWithoutLoadingScreen
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_
-  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen
-  isSpec: "True"
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen
-  nameWithType: SceneLoadingSystem.LoadSceneWithoutLoadingScreen
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{System.String})
-  name: LoadScenes(List<string>)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_System_Collections_Generic_List_System_String__
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{System.String})
-  name.vb: LoadScenes(List(Of String))
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List<string>)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List(Of String))
-  nameWithType: SceneLoadingSystem.LoadScenes(List<string>)
-  nameWithType.vb: SceneLoadingSystem.LoadScenes(List(Of String))
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{SceneLoadingData},GameObject)
+  name: LoadScenes(List<SceneLoadingData>, GameObject)
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_System_Collections_Generic_List_SceneLoadingData__GameObject_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{SceneLoadingData},GameObject)
+  name.vb: LoadScenes(List(Of SceneLoadingData), GameObject)
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List<SceneLoadingData>, GameObject)
+  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List(Of SceneLoadingData), GameObject)
+  nameWithType: SceneLoadingSystem.LoadScenes(List<SceneLoadingData>, GameObject)
+  nameWithType.vb: SceneLoadingSystem.LoadScenes(List(Of SceneLoadingData), GameObject)
 - uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes*
   name: LoadScenes
   href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_
@@ -252,15 +191,15 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes
   nameWithType: SceneLoadingSystem.LoadScenes
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List{System.String},LoadSceneMode)
-  name: LoadScenesWithoutLoadingScreen(List<string>, LoadSceneMode)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenesWithoutLoadingScreen_System_Collections_Generic_List_System_String__LoadSceneMode_
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List{System.String},LoadSceneMode)
-  name.vb: LoadScenesWithoutLoadingScreen(List(Of String), LoadSceneMode)
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List<string>, LoadSceneMode)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List(Of String), LoadSceneMode)
-  nameWithType: SceneLoadingSystem.LoadScenesWithoutLoadingScreen(List<string>, LoadSceneMode)
-  nameWithType.vb: SceneLoadingSystem.LoadScenesWithoutLoadingScreen(List(Of String), LoadSceneMode)
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List{SceneLoadingData},LoadSceneMode,System.Boolean)
+  name: LoadScenesWithoutLoadingScreen(List<SceneLoadingData>, LoadSceneMode, bool)
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenesWithoutLoadingScreen_System_Collections_Generic_List_SceneLoadingData__LoadSceneMode_System_Boolean_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List{SceneLoadingData},LoadSceneMode,System.Boolean)
+  name.vb: LoadScenesWithoutLoadingScreen(List(Of SceneLoadingData), LoadSceneMode, Boolean)
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List<SceneLoadingData>, LoadSceneMode, bool)
+  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List(Of SceneLoadingData), LoadSceneMode, Boolean)
+  nameWithType: SceneLoadingSystem.LoadScenesWithoutLoadingScreen(List<SceneLoadingData>, LoadSceneMode, bool)
+  nameWithType.vb: SceneLoadingSystem.LoadScenesWithoutLoadingScreen(List(Of SceneLoadingData), LoadSceneMode, Boolean)
 - uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen*
   name: LoadScenesWithoutLoadingScreen
   href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenesWithoutLoadingScreen_
@@ -268,15 +207,28 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen
   nameWithType: SceneLoadingSystem.LoadScenesWithoutLoadingScreen
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(System.String)
-  name: SetActiveScene(string)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_System_String_
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(System.String)
-  name.vb: SetActiveScene(String)
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(string)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(String)
-  nameWithType: SceneLoadingSystem.SetActiveScene(string)
-  nameWithType.vb: SceneLoadingSystem.SetActiveScene(String)
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData,Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle)
+  name: PopulateSceneLoadData(AddressableSceneData, AddressableSceneHandle)
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_PopulateSceneLoadData_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneHandle_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData,Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle)
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData, Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle)
+  nameWithType: SceneLoadingSystem.PopulateSceneLoadData(AddressableSceneData, AddressableSceneHandle)
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData*
+  name: PopulateSceneLoadData
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_PopulateSceneLoadData_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData
+  nameWithType: SceneLoadingSystem.PopulateSceneLoadData
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(AsyncOperationHandle{SceneInstance})
+  name: SetActiveScene(AsyncOperationHandle<SceneInstance>)
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_AsyncOperationHandle_SceneInstance__
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(AsyncOperationHandle{SceneInstance})
+  name.vb: SetActiveScene(AsyncOperationHandle(Of SceneInstance))
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(AsyncOperationHandle<SceneInstance>)
+  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(AsyncOperationHandle(Of SceneInstance))
+  nameWithType: SceneLoadingSystem.SetActiveScene(AsyncOperationHandle<SceneInstance>)
+  nameWithType.vb: SceneLoadingSystem.SetActiveScene(AsyncOperationHandle(Of SceneInstance))
 - uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene*
   name: SetActiveScene
   href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_
@@ -284,44 +236,15 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene
   nameWithType: SceneLoadingSystem.SetActiveScene
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
-  name: UnloadAll()
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadAll
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll()
-  nameWithType: SceneLoadingSystem.UnloadAll()
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll*
-  name: UnloadAll
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadAll_
-  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
-  isSpec: "True"
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll
-  nameWithType: SceneLoadingSystem.UnloadAll
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene(System.String)
-  name: UnloadScene(string)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScene_System_String_
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene(System.String)
-  name.vb: UnloadScene(String)
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene(string)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene(String)
-  nameWithType: SceneLoadingSystem.UnloadScene(string)
-  nameWithType.vb: SceneLoadingSystem.UnloadScene(String)
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene*
-  name: UnloadScene
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScene_
-  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene
-  isSpec: "True"
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene
-  nameWithType: SceneLoadingSystem.UnloadScene
-- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List{System.String})
-  name: UnloadScenes(List<string>)
-  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScenes_System_Collections_Generic_List_System_String__
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List{System.String})
-  name.vb: UnloadScenes(List(Of String))
-  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List<string>)
-  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List(Of String))
-  nameWithType: SceneLoadingSystem.UnloadScenes(List<string>)
-  nameWithType.vb: SceneLoadingSystem.UnloadScenes(List(Of String))
+- uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List{Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData})
+  name: UnloadScenes(List<AddressableSceneData>)
+  href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScenes_System_Collections_Generic_List_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData__
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List{Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData})
+  name.vb: UnloadScenes(List(Of AddressableSceneData))
+  fullName: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List<Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData>)
+  fullName.vb: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List(Of Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData))
+  nameWithType: SceneLoadingSystem.UnloadScenes(List<AddressableSceneData>)
+  nameWithType.vb: SceneLoadingSystem.UnloadScenes(List(Of AddressableSceneData))
 - uid: Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes*
   name: UnloadScenes
   href: api/Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.html#Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScenes_
@@ -335,6 +258,24 @@ references:
   commentId: N:Studio23.SS2.SceneLoadingSystem.Data
   fullName: Studio23.SS2.SceneLoadingSystem.Data
   nameWithType: Studio23.SS2.SceneLoadingSystem.Data
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData
+  name: AddressableSceneData
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html
+  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData
+  nameWithType: AddressableSceneData
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Scene
+  name: Scene
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html#Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Scene
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Scene
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Scene
+  nameWithType: AddressableSceneData.Scene
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle
+  name: AddressableSceneHandle
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle.html
+  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle
+  nameWithType: AddressableSceneHandle
 - uid: Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData
   name: BaseTextStyleData
   href: api/Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.html
@@ -353,30 +294,6 @@ references:
   commentId: F:Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.FontStyle
   fullName: Studio23.SS2.SceneLoadingSystem.Data.BaseTextStyleData.FontStyle
   nameWithType: BaseTextStyleData.FontStyle
-- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable
-  name: FakeSceneTable
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html
-  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable
-  nameWithType: FakeSceneTable
-- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene2
-  name: FakeScene2
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_FakeSceneTable_FakeScene2
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene2
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene2
-  nameWithType: FakeSceneTable.FakeScene2
-- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene3
-  name: FakeScene3
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_FakeSceneTable_FakeScene3
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene3
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.FakeScene3
-  nameWithType: FakeSceneTable.FakeScene3
-- uid: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.LoadingScene1
-  name: LoadingScene1
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_FakeSceneTable_LoadingScene1
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.LoadingScene1
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.FakeSceneTable.LoadingScene1
-  nameWithType: FakeSceneTable.LoadingScene1
 - uid: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable
   name: LoadingScreenTextTable
   href: api/Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.html
@@ -408,30 +325,106 @@ references:
   commentId: F:Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.HintsInfo
   fullName: Studio23.SS2.SceneLoadingSystem.Data.LoadingScreenTextTable.HintsInfo
   nameWithType: LoadingScreenTextTable.HintsInfo
-- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable
-  name: SceneTable
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html
-  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.SceneTable
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable
-  nameWithType: SceneTable
-- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene1
-  name: DummyScene1
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_DummyScene1
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene1
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene1
-  nameWithType: SceneTable.DummyScene1
-- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene2
-  name: DummyScene2
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_DummyScene2
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene2
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.DummyScene2
-  nameWithType: SceneTable.DummyScene2
-- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.ScriptScene
-  name: ScriptScene
-  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneTable.html#Studio23_SS2_SceneLoadingSystem_Data_SceneTable_ScriptScene
-  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneTable.ScriptScene
-  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneTable.ScriptScene
-  nameWithType: SceneTable.ScriptScene
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation
+  name: SceneLoadingOperation
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html
+  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation
+  nameWithType: SceneLoadingOperation
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.DoSceneOperation
+  name: DoSceneOperation()
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneLoadingOperation_DoSceneOperation
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.DoSceneOperation
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.DoSceneOperation()
+  nameWithType: SceneLoadingOperation.DoSceneOperation()
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.DoSceneOperation*
+  name: DoSceneOperation
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneLoadingOperation_DoSceneOperation_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.DoSceneOperation
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.DoSceneOperation
+  nameWithType: SceneLoadingOperation.DoSceneOperation
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.PrefabGameObject
+  name: PrefabGameObject
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneLoadingOperation_PrefabGameObject
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.PrefabGameObject
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.PrefabGameObject
+  nameWithType: SceneLoadingOperation.PrefabGameObject
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.SceneData
+  name: SceneData
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneLoadingOperation_SceneData
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.SceneData
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneLoadingOperation.SceneData
+  nameWithType: SceneLoadingOperation.SceneData
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction
+  name: SceneOperationAction
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.html
+  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction
+  nameWithType: SceneOperationAction
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.DoSceneOperation
+  name: DoSceneOperation()
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.html#Studio23_SS2_SceneLoadingSystem_Data_SceneOperationAction_DoSceneOperation
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.DoSceneOperation
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.DoSceneOperation()
+  nameWithType: SceneOperationAction.DoSceneOperation()
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.DoSceneOperation*
+  name: DoSceneOperation
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.html#Studio23_SS2_SceneLoadingSystem_Data_SceneOperationAction_DoSceneOperation_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.DoSceneOperation
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneOperationAction.DoSceneOperation
+  nameWithType: SceneOperationAction.DoSceneOperation
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation
+  name: SceneSetOperation
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html
+  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation
+  nameWithType: SceneSetOperation
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.DoSceneOperation
+  name: DoSceneOperation()
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneSetOperation_DoSceneOperation
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.DoSceneOperation
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.DoSceneOperation()
+  nameWithType: SceneSetOperation.DoSceneOperation()
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.DoSceneOperation*
+  name: DoSceneOperation
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneSetOperation_DoSceneOperation_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.DoSceneOperation
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.DoSceneOperation
+  nameWithType: SceneSetOperation.DoSceneOperation
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.SetActiveAddressableScene
+  name: SetActiveAddressableScene
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneSetOperation_SetActiveAddressableScene
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.SetActiveAddressableScene
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneSetOperation.SetActiveAddressableScene
+  nameWithType: SceneSetOperation.SetActiveAddressableScene
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation
+  name: SceneUnloadingOperation
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html
+  commentId: T:Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation
+  nameWithType: SceneUnloadingOperation
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.DoSceneOperation
+  name: DoSceneOperation()
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneUnloadingOperation_DoSceneOperation
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.DoSceneOperation
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.DoSceneOperation()
+  nameWithType: SceneUnloadingOperation.DoSceneOperation()
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.DoSceneOperation*
+  name: DoSceneOperation
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneUnloadingOperation_DoSceneOperation_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.DoSceneOperation
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.DoSceneOperation
+  nameWithType: SceneUnloadingOperation.DoSceneOperation
+- uid: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.ScenesToUnload
+  name: ScenesToUnload
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.html#Studio23_SS2_SceneLoadingSystem_Data_SceneUnloadingOperation_ScenesToUnload
+  commentId: F:Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.ScenesToUnload
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.SceneUnloadingOperation.ScenesToUnload
+  nameWithType: SceneUnloadingOperation.ScenesToUnload
 - uid: Studio23.SS2.SceneLoadingSystem.Data.TextData
   name: TextData
   href: api/Studio23.SS2.SceneLoadingSystem.Data.TextData.html
@@ -516,25 +509,6 @@ references:
   commentId: N:Studio23.SS2.SceneLoadingSystem.Editor
   fullName: Studio23.SS2.SceneLoadingSystem.Editor
   nameWithType: Studio23.SS2.SceneLoadingSystem.Editor
-- uid: Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor
-  name: SceneListEditor
-  href: api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html
-  commentId: T:Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor
-  fullName: Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor
-  nameWithType: SceneListEditor
-- uid: Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.GetAllScenesInBuild
-  name: GetAllScenesInBuild()
-  href: api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html#Studio23_SS2_SceneLoadingSystem_Editor_SceneListEditor_GetAllScenesInBuild
-  commentId: M:Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.GetAllScenesInBuild
-  fullName: Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.GetAllScenesInBuild()
-  nameWithType: SceneListEditor.GetAllScenesInBuild()
-- uid: Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.GetAllScenesInBuild*
-  name: GetAllScenesInBuild
-  href: api/Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.html#Studio23_SS2_SceneLoadingSystem_Editor_SceneListEditor_GetAllScenesInBuild_
-  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.GetAllScenesInBuild
-  isSpec: "True"
-  fullName: Studio23.SS2.SceneLoadingSystem.Editor.SceneListEditor.GetAllScenesInBuild
-  nameWithType: SceneListEditor.GetAllScenesInBuild
 - uid: Studio23.SS2.SceneLoadingSystem.Editor.TextStyleSettingsEditor
   name: TextStyleSettingsEditor
   href: api/Studio23.SS2.SceneLoadingSystem.Editor.TextStyleSettingsEditor.html

@@ -89,7 +89,7 @@
 
 
   <h1 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem" class="text-break">
-Class SceneLoadingSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class SceneLoadingSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -130,7 +130,7 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_Instance" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.Instance">
   Instance
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -161,69 +161,30 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
 </h2>
 
 
-  <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScene_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene*"></a>
+  <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_GetHandleData_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScene_System_String_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScene(System.String)">
-  LoadScene(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_GetHandleData_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.GetHandleData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)">
+  GetHandleData(AddressableSceneData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L102"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Load a single sceneToUnload by sceneToUnload name</p>
+  <div class="markdown level1 summary"><p>Return addressable handle data</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask LoadScene(string scene)</code></pre>
+    <pre><code class="lang-csharp hljs">public AsyncOperationHandle&lt;SceneInstance&gt; GetHandleData(AddressableSceneData addressableScene)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>addressableScene</code> <a class="xref" href="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html">AddressableSceneData</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><span class="xref">UniTask</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen*"></a>
-
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadSceneWithoutLoadingScreen_System_String_LoadSceneMode_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadSceneWithoutLoadingScreen(System.String,LoadSceneMode)">
-  LoadSceneWithoutLoadingScreen(string, LoadSceneMode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L58"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Load a single sceneToUnload by sceneToUnload name without loading screen</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask LoadSceneWithoutLoadingScreen(string scene, LoadSceneMode sceneMode = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>scene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>sceneMode</code> <span class="xref">LoadSceneMode</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">UniTask</span></dt>
+    <dt><span class="xref">AsyncOperationHandle</span>&lt;<span class="xref">SceneInstance</span>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -239,22 +200,24 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
 
   <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_System_Collections_Generic_List_System_String__" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{System.String})">
-  LoadScenes(List&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenes_System_Collections_Generic_List_SceneLoadingData__GameObject_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenes(System.Collections.Generic.List{SceneLoadingData},GameObject)">
+  LoadScenes(List&lt;SceneLoadingData&gt;, GameObject)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Load multiple scenes by a list of sceneToUnload name</p>
+  <div class="markdown level1 summary"><p>Make scenes with loading screen</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask LoadScenes(List&lt;string&gt; scenes)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask LoadScenes(List&lt;SceneLoadingData&gt; scenes, GameObject loadingScreenPrefab = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scenes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dt><code>scenes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="SceneLoadingData.html">SceneLoadingData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>loadingScreenPrefab</code> <span class="xref">GameObject</span></dt>
     <dd></dd>
   </dl>
 
@@ -276,24 +239,26 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
 
   <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenesWithoutLoadingScreen_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenesWithoutLoadingScreen_System_Collections_Generic_List_System_String__LoadSceneMode_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List{System.String},LoadSceneMode)">
-  LoadScenesWithoutLoadingScreen(List&lt;string&gt;, LoadSceneMode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_LoadScenesWithoutLoadingScreen_System_Collections_Generic_List_SceneLoadingData__LoadSceneMode_System_Boolean_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.LoadScenesWithoutLoadingScreen(System.Collections.Generic.List{SceneLoadingData},LoadSceneMode,System.Boolean)">
+  LoadScenesWithoutLoadingScreen(List&lt;SceneLoadingData&gt;, LoadSceneMode, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Load multiple scenes by sceneToUnload name without loading screen</p>
+  <div class="markdown level1 summary"><p>Make scenes without loading screen</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask LoadScenesWithoutLoadingScreen(List&lt;string&gt; scene, LoadSceneMode sceneMode = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask LoadScenesWithoutLoadingScreen(List&lt;SceneLoadingData&gt; scenes, LoadSceneMode sceneMode = null, bool activateOnload = false)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>scene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dt><code>scenes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="SceneLoadingData.html">SceneLoadingData</a>&gt;</dt>
     <dd></dd>
     <dt><code>sceneMode</code> <span class="xref">LoadSceneMode</span></dt>
+    <dd></dd>
+    <dt><code>activateOnload</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -302,6 +267,39 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
     <dt><span class="xref">UniTask</span></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_PopulateSceneLoadData_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData*"></a>
+
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_PopulateSceneLoadData_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneHandle_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.PopulateSceneLoadData(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData,Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle)">
+  PopulateSceneLoadData(AddressableSceneData, AddressableSceneHandle)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopulateSceneLoadData(AddressableSceneData addressableSceneData, AddressableSceneHandle addressableSceneHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>addressableSceneData</code> <a class="xref" href="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html">AddressableSceneData</a></dt>
+    <dd></dd>
+    <dt><code>addressableSceneHandle</code> <a class="xref" href="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneHandle.html">AddressableSceneHandle</a></dt>
+    <dd></dd>
+  </dl>
+
 
 
 
@@ -315,9 +313,9 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
 
   <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_System_String_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(System.String)">
-  SetActiveScene(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_SetActiveScene_AsyncOperationHandle_SceneInstance__" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.SetActiveScene(AsyncOperationHandle{SceneInstance})">
+  SetActiveScene(AsyncOperationHandle&lt;SceneInstance&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Make a single scene active</p>
@@ -325,76 +323,12 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask SetActiveScene(string activeScene)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask SetActiveScene(AsyncOperationHandle&lt;SceneInstance&gt; activeScene)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>activeScene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">UniTask</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadAll_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll*"></a>
-
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadAll" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadAll">
-  UnloadAll()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L102"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Unload all sceneToUnload from build settings</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UnloadAll()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScene_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene*"></a>
-
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScene_System_String_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScene(System.String)">
-  UnloadScene(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L79"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Unload a sceneToUnload by sceneToUnload name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask UnloadScene(string scene)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>scene</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>activeScene</code> <span class="xref">AsyncOperationHandle</span>&lt;<span class="xref">SceneInstance</span>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -416,9 +350,9 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
 
   <a id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScenes_" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes*"></a>
 
-  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScenes_System_Collections_Generic_List_System_String__" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List{System.String})">
-  UnloadScenes(List&lt;string&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Core_SceneLoadingSystem_UnloadScenes_System_Collections_Generic_List_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData__" data-uid="Studio23.SS2.SceneLoadingSystem.Core.SceneLoadingSystem.UnloadScenes(System.Collections.Generic.List{Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData})">
+  UnloadScenes(List&lt;AddressableSceneData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Core/SceneLoadingSystem.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unload multiple by sceneToUnload name</p>
@@ -426,12 +360,12 @@ Class SceneLoadingSystem  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniTask UnloadScenes(List&lt;string&gt; sceneToUnload)</code></pre>
+    <pre><code class="lang-csharp hljs">public UniTask UnloadScenes(List&lt;AddressableSceneData&gt; scenesToUnload)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sceneToUnload</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dt><code>scenesToUnload</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html">AddressableSceneData</a>&gt;</dt>
     <dd></dd>
   </dl>
 
