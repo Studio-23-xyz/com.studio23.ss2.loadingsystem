@@ -1,11 +1,11 @@
 # Changelog
 
-## [v1.0.5] - 2024-02-02
+## [v1.0.6] - 2024-02-23
 
-### Patch
+### Added
 
-- Removed time scale dependency
-
+- Made scene loading to work with addressable scene only
+- Removed test folder
 
 ## [v1.0.4] - 2024-01-25
 
