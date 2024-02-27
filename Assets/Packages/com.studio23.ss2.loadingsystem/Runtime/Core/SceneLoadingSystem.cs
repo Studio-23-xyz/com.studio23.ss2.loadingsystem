@@ -38,6 +38,8 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
 
         public void PopulateSceneLoadData(AddressableSceneData addressableSceneData, AddressableSceneHandle addressableSceneHandle)
         {
+            if (_scenesLoaded.ContainsKey(addressableSceneData))
+                _scenesLoaded.Remove(addressableSceneData);
             _scenesLoaded.Add(addressableSceneData, addressableSceneHandle);
         }
 

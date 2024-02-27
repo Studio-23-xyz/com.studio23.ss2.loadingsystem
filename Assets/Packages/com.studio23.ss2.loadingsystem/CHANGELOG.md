@@ -1,5 +1,14 @@
 # Changelog
 
+
+## [v1.0.7] - 2024-02-23
+
+### Added
+
+- Fixed Some Issues
+
+
+
 ## [v1.0.6] - 2024-02-23
 
 ### Added
