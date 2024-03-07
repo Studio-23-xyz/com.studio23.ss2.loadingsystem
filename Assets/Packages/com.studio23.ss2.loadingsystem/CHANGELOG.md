@@ -1,4 +1,10 @@
 # Changelog
+## [v1.0.7] - 2024-02-23
+
+### Added
+
+- Equals, hashcode override for addressablescenedata
+- Some additional error logging
 
 
 ## [v1.0.7] - 2024-02-23
