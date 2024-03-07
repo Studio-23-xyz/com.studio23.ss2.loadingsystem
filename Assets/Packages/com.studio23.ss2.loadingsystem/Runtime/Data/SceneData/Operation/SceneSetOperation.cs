@@ -16,7 +16,6 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
             var sceneHandleData = Core.SceneLoadingSystem.Instance.GetHandleData(SetActiveAddressableScene);
             if (sceneHandleData.IsValid())
                 await Core.SceneLoadingSystem.Instance.SetActiveScene(sceneHandleData);
-
         }
     }
 

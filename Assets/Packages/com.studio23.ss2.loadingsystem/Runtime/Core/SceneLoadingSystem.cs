@@ -38,14 +38,24 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
 
         public void PopulateSceneLoadData(AddressableSceneData addressableSceneData, AddressableSceneHandle addressableSceneHandle)
         {
-            _scenesLoaded.Add(addressableSceneData, addressableSceneHandle);
+            if (_scenesLoaded.ContainsKey(addressableSceneData))
+            {
+                Debug.LogWarning($"scenesloaded already has scene {addressableSceneData}", addressableSceneData);
+            }
+            else
+            {
+                Debug.Log($"scenesloaded add scene {addressableSceneData}", addressableSceneData);
+
+                _scenesLoaded.Add(addressableSceneData, addressableSceneHandle);
+            }
+            
         }
 
 
 
 
         /// <summary>
-        /// Make scenes without loading screen
+        /// Make scenes without loading screen 
         /// </summary>
         public async UniTask LoadScenesWithoutLoadingScreen(List<SceneLoadingData> scenes, LoadSceneMode sceneMode = LoadSceneMode.Additive, bool activateOnload = false)
         {
