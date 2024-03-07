@@ -89,7 +89,7 @@
 
 
   <h1 id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData" class="text-break">
-Class AddressableSceneData  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Data/SceneData/Data/AddressableSceneData.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class AddressableSceneData  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Data/SceneData/Data/AddressableSceneData.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class AddressableSceneData  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AddressableSceneData : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class AddressableSceneData : ScriptableObject, IEquatable&lt;AddressableSceneData&gt;</code></pre>
   </div>
 
 
@@ -115,6 +115,12 @@ Class AddressableSceneData  <a class="header-action link-secondary" title="View 
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html">AddressableSceneData</a>&gt;</div>
+    </dd>
+  </dl>
 
 
 
@@ -130,7 +136,7 @@ Class AddressableSceneData  <a class="header-action link-secondary" title="View 
 
   <h3 id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Scene" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Scene">
   Scene
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Data/SceneData/Data/AddressableSceneData.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Data/SceneData/Data/AddressableSceneData.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -148,6 +154,118 @@ Class AddressableSceneData  <a class="header-action link-secondary" title="View 
     <dt><span class="xref">AssetReference</span></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Equals_" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals*"></a>
+
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Equals_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)">
+  Equals(AddressableSceneData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Data/SceneData/Data/AddressableSceneData.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is required because this SO can be duplicated across addressable and non-addressable scenes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(AddressableSceneData other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html">AddressableSceneData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Equals_" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals*"></a>
+
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Equals_System_Object_" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Data/SceneData/Data/AddressableSceneData.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is required because this SO can be duplicated across addressable and non-addressable scenes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_GetHashCode_" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode*"></a>
+
+  <h3 id="Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_GetHashCode" data-uid="Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/com.studio23.ss2.loadingsystem/blob/main/Assets/Packages/com.studio23.ss2.loadingsystem/Runtime/Data/SceneData/Data/AddressableSceneData.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is required because this SO can be duplicated across addressable and non-addressable scenes.
+Hashcode override is used for dictionaries</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>hashcpde</p>
+</dd>
+  </dl>
+
+
 
 
 

@@ -264,6 +264,41 @@ references:
   commentId: T:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData
   fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData
   nameWithType: AddressableSceneData
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)
+  name: Equals(AddressableSceneData)
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html#Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Equals_Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData)
+  nameWithType: AddressableSceneData.Equals(AddressableSceneData)
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(System.Object)
+  name: Equals(object)
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html#Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Equals_System_Object_
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(object)
+  fullName.vb: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals(Object)
+  nameWithType: AddressableSceneData.Equals(object)
+  nameWithType.vb: AddressableSceneData.Equals(Object)
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals*
+  name: Equals
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html#Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Equals_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Equals
+  nameWithType: AddressableSceneData.Equals
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode
+  name: GetHashCode()
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html#Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_GetHashCode
+  commentId: M:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode()
+  nameWithType: AddressableSceneData.GetHashCode()
+- uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode*
+  name: GetHashCode
+  href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html#Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_GetHashCode_
+  commentId: Overload:Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode
+  isSpec: "True"
+  fullName: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.GetHashCode
+  nameWithType: AddressableSceneData.GetHashCode
 - uid: Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.Scene
   name: Scene
   href: api/Studio23.SS2.SceneLoadingSystem.Data.AddressableSceneData.html#Studio23_SS2_SceneLoadingSystem_Data_AddressableSceneData_Scene
