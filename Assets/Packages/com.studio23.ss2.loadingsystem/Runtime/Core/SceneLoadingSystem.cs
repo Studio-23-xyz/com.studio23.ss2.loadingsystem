@@ -40,15 +40,9 @@ namespace Studio23.SS2.SceneLoadingSystem.Core
         {
             if (_scenesLoaded.ContainsKey(addressableSceneData))
             {
-                Debug.LogWarning($"scenesloaded already has scene {addressableSceneData}", addressableSceneData);
+                _scenesLoaded.Remove(addressableSceneData);
             }
-            else
-            {
-                Debug.Log($"scenesloaded add scene {addressableSceneData}", addressableSceneData);
-
-                _scenesLoaded.Add(addressableSceneData, addressableSceneHandle);
-            }
-            
+            _scenesLoaded.Add(addressableSceneData, addressableSceneHandle);
         }
 
 
