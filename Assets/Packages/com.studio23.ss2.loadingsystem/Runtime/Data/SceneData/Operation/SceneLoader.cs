@@ -51,8 +51,11 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         {
             foreach (var operation in _loadHandles)
             {
-                await operation.Result.ActivateAsync();
+                operation.Result.ActivateAsync();
             }
+
+            await UniTask.WaitForFixedUpdate();
+
             foreach (var operation in _loadHandles)
             {
                 while (!operation.IsDone)

@@ -1,4 +1,12 @@
 # Changelog
+
+## [v1.1.0] - 2024-06-10
+
+### Added
+
+- Updated package to work with new unity 6.0
+
+
 ## [v1.0.7] - 2024-02-23
 
 ### Added
