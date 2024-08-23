@@ -1,6 +1,5 @@
 
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
@@ -19,7 +18,8 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
 
         internal async UniTask UnloadScene()
         { 
-            await Addressables.UnloadSceneAsync(LoadHandle);
+            var operation =  Addressables.UnloadSceneAsync(LoadHandle);
+            await UniTask.WaitUntil(() => operation.IsDone == false);
         }
     }
 }

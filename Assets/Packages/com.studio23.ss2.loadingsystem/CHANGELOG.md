@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.1.1] - 2024-08-23
+
+### Added
+
+- Bring package to 2022.03 version
+- Removed warring issue of yield async operation 
+
+
 ## [v1.1.0] - 2024-06-10
 
 ### Added
