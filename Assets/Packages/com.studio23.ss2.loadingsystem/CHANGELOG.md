@@ -1,5 +1,12 @@
 # Changelog
 
+## [v1.1.2] - 2024-09-17
+
+### Fixed
+
+- Fixed loading scene not working properly sometimes
+
+
 ## [v1.1.1] - 2024-08-23
 
 ### Added

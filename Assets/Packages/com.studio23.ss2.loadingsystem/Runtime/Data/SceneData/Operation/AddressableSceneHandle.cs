@@ -19,7 +19,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
         internal async UniTask UnloadScene()
         { 
             var operation =  Addressables.UnloadSceneAsync(LoadHandle);
-            await UniTask.WaitUntil(() => operation.IsDone == false);
+            await UniTask.WaitUntil(() => operation.IsDone);
         }
     }
 }
