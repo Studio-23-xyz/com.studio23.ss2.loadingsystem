@@ -1,6 +1,6 @@
 {
     "name": "com.studio23.ss2.loadingsystem",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "displayName": "Scene Loading System",
     "description": "Loading system is used for to load scene, create different type of loading screen between scene switches, create different type of hints to show between loading screen. ",
     "unity": "2022.3",
