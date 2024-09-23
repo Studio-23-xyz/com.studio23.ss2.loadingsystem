@@ -18,7 +18,7 @@ namespace Studio23.SS2.SceneLoadingSystem.Data
             if(PrefabGameObject == null)
                 await Core.SceneLoadingSystem.Instance.LoadScenesWithoutLoadingScreen(SceneData);
             else
-                await Core.SceneLoadingSystem.Instance.LoadScenes(SceneData);
+                await Core.SceneLoadingSystem.Instance.LoadScenes(SceneData, PrefabGameObject);
         }
     }
 }

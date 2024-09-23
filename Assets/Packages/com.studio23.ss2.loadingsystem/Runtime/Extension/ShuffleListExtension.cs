@@ -1,22 +1,26 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+using Random = System.Random;
+
 
 namespace Studio23.SS2.SceneLoadingSystem.Extension
 {
     public static class ShuffleListExtension
     {
-        public static List<T> Shuffle<T>(List<T> sourceList)
+        public static List<T> Shuffle<T>(List<T> list)
         {
-            var tempHints = new List<T>(sourceList);
-            if (tempHints.Count <= 0) return null;
-            tempHints.RemoveAt(0);
-            tempHints = tempHints.OrderBy(_ => Guid.NewGuid()).ToList();
-            tempHints.Add(sourceList[0]);
-            sourceList = new List<T>(tempHints);
-            return sourceList;
+            Random rng = new Random();
+
+            // Fisher-Yates shuffle algorithm
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                (list[k], list[n]) = (list[n], list[k]);
+            }
+            return list;
+
         }
     }
 
